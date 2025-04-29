@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "20px" }}>
+      <h1>按鈕測試區</h1>
+      <Button text="返回" onClick={() => alert("按到返回了")} />
+      <Button text="下一步" onClick={() => alert("按到下一步了")} />
     </div>
   );
 }
