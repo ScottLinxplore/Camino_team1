@@ -1,0 +1,30 @@
+.header-banner {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* 背景波浪圖 */
+.header-image {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: contain;
+}
+
+/* 標題文字 */
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 2%; /*靠左*/
+  transform: translateY(-50%); /*垂直置中*/
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  z-index: 2;
+}
