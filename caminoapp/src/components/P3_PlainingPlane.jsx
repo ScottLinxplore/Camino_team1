@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "../css/P2_PlainingDate.css";
+
+import "../css/P3_PlainingPlane.css";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 

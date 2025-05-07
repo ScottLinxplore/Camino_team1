@@ -1,0 +1,147 @@
+.room-type-text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.room-type-text h3 {
+  color: #666666;
+  font-size: 1.5rem;
+}
+
+.date-picker-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* 控制 select 與 To 的距離 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 每個 select 的外觀 */
+.date-picker-container select {
+  width: 150px;
+  height: 30px;
+  padding: 0 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 999px;
+  background-color: #e0e0e0;
+  border: none;
+  font-size: 20px;
+
+  appearance: none; /*完全自訂表單元素的外觀*/
+  -webkit-appearance: none; /*給這個引擎*/
+  -moz-appearance: none; /*給這個引擎*/
+}
+.room-selection-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 1rem;
+}
+.room-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 1rem;
+}
+.room-selection-left {
+  background: #fff;
+  padding: 1.5rem;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 4px solid #dbdbdb;
+  border-top: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* 你可以調整寬度大小 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 90%;
+
+  background-color: #90d27b;
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  margin: 1rem 1rem;
+}
+
+.submit-button:hover {
+  background-color: #7cc766;
+}
+
+/* 箭頭 */
+.arrow-divider {
+  border-top: 80px solid transparent; /* 箭頭高度  */
+  border-bottom: 80px solid transparent;
+  border-left: 60px solid #ccc; /* 箭頭寬度與顏色 */
+  margin-left: 2rem; /* 與左卡片距離 */
+  opacity: 0.6;
+  margin-bottom: 2.5rem; /* 強制置中(方法要再改) */
+}
+/* 右邊 */
+.room-selection-right {
+  max-height: 360px;
+  overflow-y: auto;
+  margin-left: 2rem;
+  padding: 0 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  /* border-bottom: 4px solid #dbdbdb; */
+  border-right: 4px solid #dbdbdb;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 每列一筆房型選擇 */
+.room-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* 日期文字 */
+.room-row span {
+  width: 60px;
+
+  font-size: 16px;
+  color: #333;
+}
+
+/* 下拉選單美化 */
+.room-row select {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ddd;
+  font-size: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* 美化捲軸（可選） */
+.room-selection-right::-webkit-scrollbar {
+  width: 8px;
+}
+.room-selection-right::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
