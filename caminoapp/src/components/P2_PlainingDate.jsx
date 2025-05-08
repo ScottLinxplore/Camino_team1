@@ -1,20 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../css/P2_PlainingDate.css";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom"; //可以把這頁的值船去下一頁
+import { useNavigate, useLocation } from "react-router-dom"; //可以把這頁的值船去下一頁
 
 // 主元件
 export default function PlainingDate() {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate(); //可以把這頁的值船去下一頁
-
+  const [data, setData] = useState(null); //用來存放從後端抓到的資料
+  const location = useLocation();
+  const routeId = location.state?.routeId;
+  const route = data?.find((item) => item.route_id === parseInt(routeId));
+  useEffect(() => {
+    fetch("http://localhost:3002/route")
+      .then((response) => response.json())
+      .then((json) => console.log("抓到資料：", json) || setData(json))
+      .catch((error) => console.error("抓資料失敗", error));
+  }, []);
   return (
     <div className="planingdate">
       <div className="route_name">
-        <h3>法國之路</h3>
+        <h3>{route?.name && route.name}</h3>
       </div>
 
       <div className="calendar-container">
@@ -98,6 +107,7 @@ export default function PlainingDate() {
                 state: {
                   startDate,
                   endDate,
+                  routeId,
                 },
               });
             } else {

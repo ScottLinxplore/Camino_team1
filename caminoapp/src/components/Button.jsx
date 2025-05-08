@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css";
 
-export default function Button({ text, onClick }) {
+function Button({ text, onClick }) {
   return (
     <>
       <button onClick={onClick} className="button">
@@ -10,6 +10,7 @@ export default function Button({ text, onClick }) {
     </>
   );
 }
+export default Button;
 
 // 使用方式: 請在App.js直接複製以下內容
 

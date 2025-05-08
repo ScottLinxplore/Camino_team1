@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import DatePicker from "react-datepicker";
 
@@ -7,9 +7,19 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
 export default function PlainingPlane() {
+  const [data, setData] = useState(null); //用來存放從後端抓到的資料
+
+  useEffect(() => {
+    fetch("http://localhost:3002/route")
+      .then((response) => response.json())
+      .then((json) => console.log("抓到資料：", json) || setData(json))
+      .catch((error) => console.error("抓資料失敗", error));
+  }, []);
   const navigate = useNavigate();
   //接上一頁的
   const location = useLocation();
+  const routeId = location.state?.routeId;
+  const route = data?.find((item) => item.route_id === parseInt(routeId));
   console.log(location.state);
   const { startDate: initialStart, endDate: initialEnd } = location.state || {};
   //設定checkbox初始狀態
@@ -94,7 +104,7 @@ export default function PlainingPlane() {
   return (
     <div className="planing-plane">
       <div className="route_name">
-        <h3>法國之路</h3>
+        <h3>{route?.name && route.name}</h3>
       </div>
 
       <div className="calendar-container">
@@ -281,12 +291,13 @@ export default function PlainingPlane() {
           onClick={() => {
             //  跳轉並傳送 state
             if (startDate && endDate) {
-              navigate("/PlainingRoom", {
+              navigate("/Day", {
                 state: {
                   startDate,
                   endDate,
-                  departureFlight: selectedDepartureFlight,
+                  departureFlight: selectedDepartureFlight, //冒號左邊是要給下一頁的東西 右邊是這一頁要傳的值
                   returnFlight: selectedReturnFlight,
+                  routeId: routeId,
                 },
               });
             } else {

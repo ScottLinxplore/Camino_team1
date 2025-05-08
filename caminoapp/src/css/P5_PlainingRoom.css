@@ -145,3 +145,36 @@
   background-color: #ccc;
   border-radius: 8px;
 }
+/* 彈窗 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 半透明遮罩 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 25px;
+  width: 500px;
+  height: 300px;
+}
+
+.modal p {
+  padding-top: 1rem;
+}
+.calculatebutton {
+  margin-top: 2rem;
+}
+.modal ul {
+  margin-top: 2rem;
+  list-style: none;
+}
