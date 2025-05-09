@@ -85,7 +85,6 @@ export default function PlainingPlane() {
   const getHoursNumber = (hourStr) =>
     parseInt(hourStr.replace(/[^0-9]/g, ""), 10);
 
-  // 總飛行時間（單位：小時）
   const totalDuration =
     (selectedDepartureFlight
       ? getHoursNumber(selectedDepartureFlight.durationHours)
@@ -94,7 +93,6 @@ export default function PlainingPlane() {
       ? getHoursNumber(selectedReturnFlight.durationHours)
       : 0);
 
-  // 總價格（單位：元）
   const totalPrice =
     (selectedDepartureFlight
       ? getPriceNumber(selectedDepartureFlight.price)
@@ -221,7 +219,13 @@ export default function PlainingPlane() {
           <input
             type="checkbox"
             checked={showDepartureFlights}
-            onChange={() => setShowDeparture(!showDepartureFlights)}
+            onChange={() => {
+              const newValue = !showDepartureFlights;
+              setShowDeparture(newValue);
+              if (!newValue) {
+                setSelectedDepartureFlight(null); // 清除選擇
+              }
+            }}
           />
           去程班機:
         </label>
@@ -230,7 +234,13 @@ export default function PlainingPlane() {
           <input
             type="checkbox"
             checked={showReturnFlights}
-            onChange={() => setShowReturn(!showReturnFlights)}
+            onChange={() => {
+              const newValue = !showReturnFlights;
+              setShowReturn(newValue);
+              if (!newValue) {
+                setSelectedReturnFlight(null); // 清除選擇
+              }
+            }}
           />
           回程班機:
         </label>

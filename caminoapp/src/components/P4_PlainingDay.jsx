@@ -14,6 +14,8 @@ function DayChoosePage() {
   const [Days, setDays] = useState(null);
   const [CarFee, setCarFee] = useState(null);
   const [TransferTime, setTransferTime] = useState(null);
+  const [isStartTransfer, setIsStartTransfer] = useState(false);
+  const [isEndTransfer, setIsEndTransfer] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3002/route")
@@ -81,6 +83,86 @@ function DayChoosePage() {
           />
         </div>
       </div>
+      <div className="timeline-container" style={{ marginTop: "3rem" }}>
+        {/* 出發機場 */}
+        <div className="timeline-step">
+          {selectedDepartureFlight ? (
+            <div className="plane-on-dot">✈️</div>
+          ) : (
+            <div className="dot" />
+          )}
+          <div className="label">
+            {selectedDepartureFlight
+              ? selectedDepartureFlight.route.split("→")[0].trim()
+              : "出發機場"}
+          </div>
+        </div>
+
+        {/* 第一段連接線 */}
+        <div
+          className={`timeline-line long2 ${
+            selectedDepartureFlight ? "blue-line" : ""
+          }`}
+        />
+
+        {/* 抵達機場 */}
+        <div className="timeline-step">
+          <div className="dot" />
+          <div className="label">
+            {selectedDepartureFlight
+              ? selectedDepartureFlight.route.split("→").slice(-1)[0].trim()
+              : "抵達機場"}
+          </div>
+        </div>
+
+        {/* 中間點 - 聖讓 */}
+        <div
+          className={`timeline-line ${isStartTransfer ? "blue-line" : ""}`}
+        />
+        <div className="timeline-step">
+          <div className="dot" />
+          <div className="label">聖讓</div>
+        </div>
+
+        {/* 中間點 - 聖地牙哥 */}
+        <div className="timeline-line completed long" />
+        <div className="timeline-step">
+          <div className="dot" />
+          <div className="label">聖地牙哥</div>
+        </div>
+
+        {/* 回程出發機場 */}
+        <div className={`timeline-line ${isEndTransfer ? "blue-line" : ""}`} />
+        <div className="timeline-step">
+          {selectedReturnFlight ? (
+            <div className="plane-on-dot">✈️</div>
+          ) : (
+            <div className="dot" />
+          )}
+          <div className="label">
+            {selectedReturnFlight
+              ? selectedReturnFlight.route.split("→")[0].trim()
+              : "出發機場"}
+          </div>
+        </div>
+
+        {/* 回程中間線 */}
+        <div
+          className={`timeline-line long2 ${
+            selectedReturnFlight ? "blue-line" : ""
+          }`}
+        />
+
+        {/* 回程抵達機場 */}
+        <div className="timeline-step">
+          <div className="dot" />
+          <div className="label">
+            {selectedReturnFlight
+              ? selectedReturnFlight.route.split("→").slice(-1)[0].trim()
+              : "抵達機場"}
+          </div>
+        </div>
+      </div>
 
       <div>
         <div
@@ -119,6 +201,8 @@ function DayChoosePage() {
               RID={routeId}
               onCarFeeChange={setCarFee}
               onTransferTimeChange={setTransferTime}
+              onStartTransferToggle={setIsStartTransfer}
+              onEndTransferToggle={setIsEndTransfer}
             />
           </div>
         </div>
@@ -127,11 +211,11 @@ function DayChoosePage() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "0 auto",
-          position: "relative",
-          left: "680px",
+          justifyContent: "flex-end",
+          gap: "12px",
+          padding: "1rem 1.5rem",
+          width: "94%", //
+          boxSizing: "border-box",
         }}
       >
         <Button text={"返回"} />
@@ -147,6 +231,8 @@ function DayChoosePage() {
                   departureFlight: selectedDepartureFlight, //冒號左邊是要給下一頁的東西 右邊是這一頁要傳的值
                   returnFlight: selectedReturnFlight,
                   routeId: routeId,
+                  isStartTransfer,
+                  isEndTransfer,
                 },
               });
             } else {

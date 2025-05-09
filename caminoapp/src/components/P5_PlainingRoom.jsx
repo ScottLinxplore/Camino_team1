@@ -25,8 +25,11 @@ export default function PlainingRoom() {
     endDate,
     departureFlight,
     returnFlight,
+
     departureFlight: selectedDepartureFlight,
     returnFlight: selectedReturnFlight,
+    isStartTransfer,
+    isEndTransfer,
   } = location.state || {};
   const routeId = location.state?.routeId;
   const route = data?.find((item) => item.route_id === parseInt(routeId));
@@ -136,7 +139,9 @@ export default function PlainingRoom() {
             </div>
           </div>
 
-          <div className="timeline-line" />
+          <div
+            className={`timeline-line ${isStartTransfer ? "blue-line" : ""}`}
+          />
           <div className="timeline-step">
             <div className="dot" />
             <div className="label">聖讓</div>
@@ -148,7 +153,9 @@ export default function PlainingRoom() {
             <div className="label">聖地牙哥</div>
           </div>
 
-          <div className="timeline-line" />
+          <div
+            className={`timeline-line ${isEndTransfer ? "blue-line" : ""}`}
+          />
 
           {/* 回程出發 */}
           <div className="timeline-step">
@@ -374,9 +381,14 @@ export default function PlainingRoom() {
                     state: {
                       startDate,
                       endDate,
-                      departureFlight: selectedDepartureFlight, //冒號左邊是要給下一頁的東西 右邊是這一頁要傳的值
+                      departureFlight: selectedDepartureFlight,
                       returnFlight: selectedReturnFlight,
-                      routeId: routeId,
+                      routeId,
+                      selectedStartDate,
+                      selectedEndDate,
+                      roomPlan,
+                      isStartTransfer,
+                      isEndTransfer,
                     },
                   });
                 }}

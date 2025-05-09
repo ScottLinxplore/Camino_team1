@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
+function TransferChoose({
+  RID,
+  onCarFeeChange,
+  onTransferTimeChange,
+  onStartTransferToggle,
+  onEndTransferToggle,
+}) {
   const [data, setData] = useState(null);
   const [isStartChecked, setIsStartChecked] = useState(false);
   const [isEndChecked, setIsEndChecked] = useState(false);
@@ -40,11 +46,12 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
     backgroundColor: "grey",
     display: "flex",
     alignItems: "stretch",
-    width: "700px",
-    height: "107px",
+    width: "100%",
+    height: "auto",
     borderRadius: "6px",
     position: "relative",
     overflow: "hidden",
+    marginTop: "8px",
   };
 
   const imageStyle = {
@@ -73,7 +80,11 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
           <input
             type="checkbox"
             checked={isStartChecked}
-            onChange={() => setIsStartChecked(!isStartChecked)}
+            onChange={() => {
+              const newValue = !isStartChecked;
+              setIsStartChecked(newValue);
+              onStartTransferToggle?.(newValue); // 通知父層
+            }}
           />
           去程機場接送:
         </label>
@@ -86,7 +97,11 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
             />
           </div>
           <div
-            style={{ paddingLeft: "10px", paddingTop: "5px", color: "white" }}
+            style={{
+              paddingLeft: "10px",
+              paddingTop: "5px",
+              color: "white",
+            }}
           >
             {route?.start_airport} ➝ {route?.start_city}
             <br />
@@ -96,8 +111,8 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
           </div>
           <div
             style={{
-              right: 10,
-              bottom: -10,
+              right: 20,
+              bottom: 10,
               position: "absolute",
               color: "white",
             }}
@@ -109,12 +124,16 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
       </div>
 
       {/* 回程 */}
-      <div style={{ marginTop: "0px", height: "130px" }}>
+      <div style={{ marginTop: "10px", height: "130px" }}>
         <label>
           <input
             type="checkbox"
             checked={isEndChecked}
-            onChange={() => setIsEndChecked(!isEndChecked)}
+            onChange={() => {
+              const newValue = !isEndChecked;
+              setIsEndChecked(newValue);
+              onEndTransferToggle?.(newValue); // 通知父層
+            }}
           />
           回程機場接送:
         </label>
@@ -127,7 +146,11 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
             />
           </div>
           <div
-            style={{ paddingLeft: "10px", paddingTop: "5px", color: "white" }}
+            style={{
+              paddingLeft: "10px",
+              paddingTop: "5px",
+              color: "white",
+            }}
           >
             {route?.end_city} ➝ {route?.end_airport}
             <br />
@@ -137,8 +160,8 @@ function TransferChoose({ RID, onCarFeeChange, onTransferTimeChange }) {
           </div>
           <div
             style={{
-              right: 10,
-              bottom: -10,
+              right: 20,
+              bottom: 20,
               position: "absolute",
               color: "white",
             }}

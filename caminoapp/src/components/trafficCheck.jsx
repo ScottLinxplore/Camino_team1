@@ -31,14 +31,14 @@ function TrafficCheckStructure({ data, type }) {
           style={{
             backgroundColor: "#D0ECFF",
             padding: "10px",
-            display: "inline-block",
+            marginTop: "1rem",
             marginRight: "10px",
-            width: "730px",
+            width: "100%",
+            maxWidth: "720px",
+            boxSizing: "border-box",
           }}
         >
-          <strong style={{ paddingLeft: "10px", marginBottom: "10px" }}>
-            {title}：
-          </strong>{" "}
+          <strong style={{ marginBottom: "10px" }}>{title}：</strong>{" "}
           {isValid
             ? flights
                 .map((f) => f.from.match(/\((.*?)\)/)?.[1] || f.from)
@@ -46,28 +46,49 @@ function TrafficCheckStructure({ data, type }) {
               ` → ${
                 flights[flights.length - 1].to.match(/\((.*?)\)/)?.[1] ||
                 flights[flights.length - 1].to
-              }　　　　　　總耗時：約 ${totalDuration} 小時　　　　　　　　　NTD： ${totalPrice.toLocaleString()}`
+              }　　總耗時：約 ${totalDuration} 小時　　NTD： ${totalPrice.toLocaleString()}`
             : "尚未訂購"}
         </div>
         <div>
           {isValid && (
-            <ul
+            <div
               style={{
                 padding: "10px",
-                paddingLeft: "20px",
-                listStyleType: "none",
                 backgroundColor: "#E4F8FF",
-                width: "720px",
-                marginTop: "0px",
+                width: "100%",
+                boxSizing: "border-box",
+
+                maxWidth: "720px",
               }}
             >
               {flights.map((f, idx) => (
-                <li key={idx}>
-                  {f.airline} {f.flightNumber}　{f.date}　{f.from} → {f.to}　　
-                  {f.depart} → {f.arrive}　　NTD {f.price}
-                </li>
+                <div
+                  key={idx}
+                  style={{
+                    display: "flex",
+                    gap: "1px",
+                    padding: "3px 0",
+                    fontSize: "0.95rem",
+                  }}
+                >
+                  <span style={{ width: "120px", flexShrink: 0 }}>
+                    {f.airline} {f.flightNumber}
+                  </span>
+                  <span style={{ width: "120px", flexShrink: 0 }}>
+                    {f.date}
+                  </span>
+                  <span style={{ width: "170px", flexShrink: 0 }}>
+                    {f.from} → {f.to}
+                  </span>
+                  <span style={{ width: "180px", flexShrink: 0 }}>
+                    {f.depart} → {f.arrive}
+                  </span>
+                  <span style={{ width: "120px", flexShrink: 0 }}>
+                    NTD {f.price}
+                  </span>
+                </div>
               ))}
-            </ul>
+            </div>
           )}
         </div>
       </div>
@@ -82,9 +103,10 @@ function TrafficCheckStructure({ data, type }) {
           backgroundColor: "#D0ECFF",
           padding: "10px",
           marginBottom: "10px",
-          display: "inline-block",
           marginRight: "10px",
-          width: "730px",
+          width: "100%",
+          maxWidth: "720px",
+          boxSizing: "border-box",
         }}
       >
         <strong style={{ paddingLeft: "10px" }}>{title}：</strong>{" "}
@@ -103,7 +125,14 @@ function TrafficCheckStructure({ data, type }) {
           {renderSection("回程", data.backFlights)}
         </div>
       ) : (
-        <div>
+        <div
+          style={{
+            display: "flex",
+            // flexWrap: "wrap",
+            gap: "10px",
+            justifyContent: "flex-start",
+          }}
+        >
           {renderSimpleSection(
             "去程接駁車",
             data.goFrom,
@@ -131,7 +160,7 @@ function TrafficCheck() {
         airline: "中華航空",
         flightNumber: "CI 833",
         date: "2025/7/15(二)",
-        depart: "清晨7:00",
+        depart: "上午7:00",
         arrive: "上午11:00",
         from: "台北(TPE)",
         to: "曼谷(BKK)",
@@ -176,7 +205,7 @@ function TrafficCheck() {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
       <div style={{ display: "flex", alignItems: "flex-start" }}>
         <h3 style={{ width: "120px", marginTop: "10px" }}>班機資訊：</h3>
         <TrafficCheckStructure data={flightData} type="flight" />

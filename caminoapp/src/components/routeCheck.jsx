@@ -4,7 +4,7 @@ function RouteIMG({ route }) {
     <div
       style={{
         height: "300px",
-        width: "875px",
+        width: "100%",
         overflow: "hidden",
         position: "relative",
         backgroundColor: "red",
@@ -49,7 +49,7 @@ function RouteInfo({ route }) {
   const difficultyText =
     route.difficulty === 1 ? "簡單" : route.difficulty === 2 ? "中等" : "困難";
   return (
-    <div style={{ width: "700px", paddingTop: "30px", paddingLeft: "20px" }}>
+    <div style={{ width: "100%", paddingTop: "2rem", paddingLeft: "1.5rem" }}>
       <strong>{route?.name && route.name}路線資訊：</strong>
       <br />
       健行總距離：{route?.length && route.length} 公里
@@ -83,7 +83,7 @@ function RouteCheck() {
         display: "flex",
         flexDirection: "row",
         gap: "10px",
-        width: "1650px",
+        width: "100%",
       }}
     >
       <div style={{ flex: "0 0 auto" }}>

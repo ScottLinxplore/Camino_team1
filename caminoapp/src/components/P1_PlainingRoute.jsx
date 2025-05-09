@@ -5,10 +5,10 @@ function RoutePage() {
     <div style={{ marginTop: 30 }}>
       <h1
         style={{
-          fontSize: "7em",
+          fontSize: "5em",
           position: "absolute",
-          top: "70%",
-          left: "10%",
+          top: "92%",
+          left: "12%",
           zIndex: 3,
         }}
       >
