@@ -1,0 +1,12 @@
+/* 照著初始->hover->active->visited的順序才會觸發 */
+.link{
+    color: green;
+}
+
+.link:hover{
+    color: gold;
+}
+
+.link:active{
+    color: black;
+}
