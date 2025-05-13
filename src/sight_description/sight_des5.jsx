@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from "../components/navbar/Navbar1"
-import Footer from "../components/footer/Footer"
-import Topimg from '../components/sight/location.png'
+import Navbar from "../features/navbar/Navbar1"
+import Footer from "../features/footer/Footer"
+import Topimg from '../features/sight/location.png'
 import { FaRegHeart } from 'react-icons/fa'; //空心愛心
 import { FaHeart } from 'react-icons/fa'; //空心愛心
 import { useNavigate } from 'react-router-dom';

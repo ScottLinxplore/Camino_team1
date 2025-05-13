@@ -1,10 +1,10 @@
-import Froute from "./Froute"
+import Froute from "./pages/routeInformation/Froute.jsx"
 import { useState, Navigate } from "react"; //react 核心模組
-import HomeRoute from "./homeRoute"
-import Albergue from "./Albergue"
-import Stamp from "./Stamp"
+import HomeRoute from "./pages/routeInformation/homeRoute.jsx"
+import Albergue from "./pages/routeInformation/Albergue.jsx"
+import Stamp from "./pages/routeInformation/Stamp.jsx"
 //景點+詳細介紹
-import Location from "./Location"
+import Location from "./pages/routeInformation/Location.jsx"
 import SightDetail1 from './sight_description/sight_des1'
 import SightDetail2 from './sight_description/sight_des2'
 import SightDetail3 from './sight_description/sight_des3'
@@ -16,14 +16,14 @@ import SightDetail8 from './sight_description/sight_des8'
 import SightDetail9 from './sight_description/sight_des9'
 
 //登入系統
-import Login from '../src/login/App.jsx'
-import LoginRegister from "../src/login/auth/LoginRegister.jsx"; //登入元件
-import MemberCenter from "../src/login/pages/memberCenter/index.jsx"; //會員中心 ?
-import VerifyPage from "../src/login/auth/VerifyPage.jsx"; //驗證
+import Login from './login/App.jsx'
+import LoginRegister from "./login/auth/LoginRegister.jsx"; //登入元件
+import MemberCenter from "./login/pages/memberCenter/index.jsx"; //會員中心 ?
+import VerifyPage from "./login/auth/VerifyPage.jsx"; //驗證
 
 
 //滾動自動到頂部
-import ScrollToTop from "./ScrollToTop"
+import ScrollToTop from "./pages/routeInformation/ScrollToTop.jsx"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
 import styles from "./Froute.module.css";
-import Map from "./components/Froute/map"
-import City1 from './weatherAPI/Saint-Jean-Pied-de-Port';
-import City2 from './weatherAPI/Roncesvalles';
-import City3 from './weatherAPI/Zubiri';
-import City4 from './weatherAPI/Pamplona';
-import City5 from "./weatherAPI/Puente la Reina";
-import City6 from "./weatherAPI/Estella";
-import City7 from "./weatherAPI/Los Arcos";
-import City8 from "./weatherAPI/Viana";
-import City9 from "./weatherAPI/Logrono";
-import City10 from "./weatherAPI/Navarrete";
-import City11 from "./weatherAPI/Najera";
-import City12 from "./weatherAPI/Santo Domingo de la Calzada";
-import City13 from "./weatherAPI/Granon";
-import City14 from "./weatherAPI/Belorado";
-import City15 from "./weatherAPI/Villafranca Montes de Oca";
-import City16 from "./weatherAPI/San Juan de Ortega";
-import City17 from "./weatherAPI/Burgos";
-import City18 from "./weatherAPI/Hornillos del Camino";
-import City19 from "./weatherAPI/Castrojeriz";
-import City20 from "./weatherAPI/Fromista";
-import City21 from "./weatherAPI/Carrion de los Condes";
-import City22 from "./weatherAPI/Calzadilla de la Cueza";
-import City23 from "./weatherAPI/Sahagun";
-import City24 from "./weatherAPI/El Burgo Ranero";
-import City25 from "./weatherAPI/Mansilla de las Mulas";
-import City26 from "./weatherAPI/Leon";
-import City27 from "./weatherAPI/Hospital de Orbigo";
-import City28 from "./weatherAPI/Astorga";
-import City29 from "./weatherAPI/Ponferrada";
-import City30 from "./weatherAPI/Sarria";
+import Map from "../../features/Froute/map"
+import City1 from '../../weatherAPI/Saint-Jean-Pied-de-Port';
+import City2 from '../../weatherAPI/Roncesvalles';
+import City3 from '../../weatherAPI/Zubiri';
+import City4 from '../../weatherAPI/Pamplona';
+import City5 from "../../weatherAPI/Puente la Reina";
+import City6 from "../../weatherAPI/Estella";
+import City7 from "../../weatherAPI/Los Arcos";
+import City8 from "../../weatherAPI/Viana";
+import City9 from "../../weatherAPI/Logrono";
+import City10 from "../../weatherAPI/Navarrete";
+import City11 from "../../weatherAPI/Najera";
+import City12 from "../../weatherAPI/Santo Domingo de la Calzada";
+import City13 from "../../weatherAPI/Granon";
+import City14 from "../../weatherAPI/Belorado";
+import City15 from "../../weatherAPI/Villafranca Montes de Oca";
+import City16 from "../../weatherAPI/San Juan de Ortega";
+import City17 from "../../weatherAPI/Burgos";
+import City18 from "../../weatherAPI/Hornillos del Camino";
+import City19 from "../../weatherAPI/Castrojeriz";
+import City20 from "../../weatherAPI/Fromista";
+import City21 from "../../weatherAPI/Carrion de los Condes";
+import City22 from "../../weatherAPI/Calzadilla de la Cueza";
+import City23 from "../../weatherAPI/Sahagun";
+import City24 from "../../weatherAPI/El Burgo Ranero";
+import City25 from "../../weatherAPI/Mansilla de las Mulas";
+import City26 from "../../weatherAPI/Leon";
+import City27 from "../../weatherAPI/Hospital de Orbigo";
+import City28 from "../../weatherAPI/Astorga";
+import City29 from "../../weatherAPI/Ponferrada";
+import City30 from "../../weatherAPI/Sarria";
 
 const cities = [
     { label: "Saint-Jean-Pied-de-Port", value: "SaintJean", component: <City1 /> },

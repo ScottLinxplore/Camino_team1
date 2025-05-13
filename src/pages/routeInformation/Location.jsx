@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./components/navbar/Navbar1";
-import Footer from "./components/footer/Footer";
+import Navbar from "../../features/navbar/Navbar1";
+import Footer from "../../features/footer/Footer";
 import { useNavigate } from "react-router-dom";
-import Topimg from "./components/sight/location.png";
-import SightCard from "./components/sight/sightCard";
+import Topimg from "../../features/sight/location.png";
+import SightCard from "../../features/sight/sightCard";
 //匯入愛心圖案
 // import Heart from './components/sight/heart'
 //匯入空心愛心圖案

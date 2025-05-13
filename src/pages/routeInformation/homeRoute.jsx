@@ -1,13 +1,13 @@
 import React from 'react'
-import Navbar from "./components/navbar/Navbar1"
-import Topimg from "./components/homeRoute/homeRoute.png"
-import Footer from "./components/footer/Footer"
-import RouteInfo1 from "./components/homeRoute/homeRoute_1"
-import RouteInfo2 from "./components/homeRoute/homeRoute_2"
-import RouteInfo3 from "./components/homeRoute/homeRoute_3"
-import RouteInfo4 from "./components/homeRoute/homeRoute_4"
-import RouteInfo5 from "./components/homeRoute/homeRoute_5"
-import RouteInfo6 from "./components/homeRoute/homeRoute_6"
+import Navbar from "../../features/navbar/Navbar1"
+import Topimg from "../../features/homeRoute/homeRoute.png"
+import Footer from "../../features/footer/Footer"
+import RouteInfo1 from "../../features/homeRoute/homeRoute_1"
+import RouteInfo2 from "../../features/homeRoute/homeRoute_2"
+import RouteInfo3 from "../../features/homeRoute/homeRoute_3"
+import RouteInfo4 from "../../features/homeRoute/homeRoute_4"
+import RouteInfo5 from "../../features/homeRoute/homeRoute_5"
+import RouteInfo6 from "../../features/homeRoute/homeRoute_6"
 
 const homeRoute = () => {
     return (

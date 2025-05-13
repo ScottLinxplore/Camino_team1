@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from "./components/navbar/Navbar1"
-import Footer from "./components/footer/Footer"
-import Topimg from './components/albergue/shlter.png'
+import Navbar from "../../features/navbar/Navbar1.jsx"
+import Footer from "../../features/footer/Footer.jsx"
+import Topimg from '../../features/albergue/shlter.png'
 import { useNavigate } from 'react-router-dom';
-import Card from './components/albergue/card.jsx'
+import Card from '../../features/albergue/card.jsx'
 
 const Albergue = () => {
   // 返回路線資訊的button

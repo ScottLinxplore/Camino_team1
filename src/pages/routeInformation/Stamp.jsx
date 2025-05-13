@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from "./components/navbar/Navbar1"
-import Footer from "./components/footer/Footer"
+import Navbar from "../../features/navbar/Navbar1"
+import Footer from "../../features/footer/Footer"
 import { useNavigate } from 'react-router-dom';
-import Topimg from './components/stamp/Stamp.png'
+import Topimg from '../../features/stamp/Stamp.png'
 import './Stamp.css'
 
 const Albergue = () => {

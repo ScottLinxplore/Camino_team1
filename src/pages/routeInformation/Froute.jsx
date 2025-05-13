@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Froute.module.css";
-import Altitude from "./Routes/altitude";
-import temperory from "./Routes/image.png";
+import Altitude from "../../Routes/altitude";
+import temperory from "../../Routes/image.png";
 import Weather from "./showWeather";
-import Navbar from "./components/navbar/Navbar1";
-import Topimg from "./components/navbar/topimg.png";
-import TopSection from "./components/Froute/Top3";
-import "./components/Froute/slideshow.css";
-import Slideshow from "./components/Froute/slideshow";
-import { IntroFooter } from "./components/Froute/intro_footer";
-import IntroFooter2 from "./components/Froute/intro_footer2";
-import Footer from "./components/footer/Footer";
-import AverageWeather from "./weatherAPI/averageWeather";
+import Navbar from "../../features/navbar/Navbar1";
+import Topimg from "../../features/navbar/topimg.png";
+import TopSection from "../../features/Froute/Top3";
+import "../../features/Froute/slideshow.css";
+import Slideshow from "../../features/Froute/slideshow";
+import { IntroFooter } from "../../features/Froute/intro_footer";
+import IntroFooter2 from "../../features/Froute/intro_footer2";
+import Footer from "../../features/footer/Footer";
+import AverageWeather from "../../weatherAPI/averageWeather";
 import { useNavigate } from "react-router-dom";
 // import Map from "./components/Froute/map"
 
