@@ -96,10 +96,12 @@ const ShowCanvas = () => {
                 maxWidth: '1200px',
                 margin: '0 auto',
             }}>
-                {/* 左側地圖 */}
+                {/* 城市天氣中的左側地圖 */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                     <Map
                         className={styles.map}
+                        // 將資料反向傳送給紅色景點icon(selectedCity的useState)
+                        selectedCityLabel={selectedCity}
                         // 接收onCityClick事件，將從map內傳出的label接收
                         // 並對應到option內的值，找到該值並顯示城市名稱
                         onCityClick={(label) => {
@@ -110,9 +112,9 @@ const ShowCanvas = () => {
                             }
                         }}
                     />
-                    </div>
+                </div>
 
-                {/* 右側 chart + 選單 */}
+                {/* 城市天氣中的右側 chart + 選單 */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                     {/* 選擇城市欄位 (靠右) */}
                     <div style={{ textAlign: 'right', paddingRight: '30px', marginBottom: '10px' }}>

@@ -42,7 +42,7 @@ const pathsData = [
   },
 ];
 
-function MapRoute({ className, onCityClick }) {
+function MapRoute({ className, onCityClick,selectedCityLabel }) {
   //建立選取點的狀態
   const pathRef = useRef(null);
   const containerRef = useRef(null);
@@ -113,6 +113,16 @@ function MapRoute({ className, onCityClick }) {
       setPathPoints(points);
     }
   }, []);
+
+  //這一段將外層select選擇的option傳進來，讓紅色景點icon(selectedCity)亮起
+  useEffect(() => {
+    if (selectedCityLabel && pathPoints.length > 0) {
+      const point = pathPoints.find((pt) => pt.label === selectedCityLabel);
+      if (point) {
+        setSelectedPoint(point);
+      }
+    }
+  }, [selectedCityLabel, pathPoints]);
 
   return (
     <div
@@ -216,6 +226,7 @@ function MapRoute({ className, onCityClick }) {
         const left = ((pt.cx - viewBox.x) / viewBox.width) * width;
         // +27微調y軸至對其黃色路線
         const top = ((pt.cy - viewBox.y) / viewBox.height) * height + 27;
+
 
         return (
 

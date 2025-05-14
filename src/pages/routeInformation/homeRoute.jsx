@@ -1,52 +1,40 @@
-import React from 'react'
-import Navbar from "../../features/navbar/Navbar1"
-import Topimg from "../../features/homeRoute/homeRoute.png"
-import Footer from "../../features/footer/Footer"
-import RouteInfo1 from "../../features/homeRoute/homeRoute_1"
-import RouteInfo2 from "../../features/homeRoute/homeRoute_2"
-import RouteInfo3 from "../../features/homeRoute/homeRoute_3"
-import RouteInfo4 from "../../features/homeRoute/homeRoute_4"
-import RouteInfo5 from "../../features/homeRoute/homeRoute_5"
-import RouteInfo6 from "../../features/homeRoute/homeRoute_6"
+import React from 'react';
+import Navbar from "../../features/navbar/Navbar1";
+import Topimg from "../../features/homeRoute/homeRoute.png";
+import Footer from "../../features/footer/Footer";
+import RouteInfo1 from "../../features/homeRoute/homeRoute_1";
+import RouteInfo2 from "../../features/homeRoute/homeRoute_2";
+import RouteInfo3 from "../../features/homeRoute/homeRoute_3";
+import RouteInfo4 from "../../features/homeRoute/homeRoute_4";
+import RouteInfo5 from "../../features/homeRoute/homeRoute_5";
+import RouteInfo6 from "../../features/homeRoute/homeRoute_6";
+import styles from './homeRoute.module.css'; // ⭐ 引入 CSS Module
 
 const homeRoute = () => {
-    return (
-        <>
-            <div style={{ fontFamily: "sans-serif", padding: "10px", paddingLeft: "20px" }}>
-                <nav><Navbar /> </nav>
-                <div>
-                    <img alt="圖片載入中" src={Topimg} style={{ width: '600px', marginTop: '30px' }}></img>
-                </div>
+  return (
+    <>
+      <div className={styles.pageContainer}>
+        <nav><Navbar /></nav>
 
-                <div style={{ position: 'relative' }}>
-                    <button style={{
-                        position: 'absolute',
-                        width: '150px',
-                        height: '60px',
-                        top: '0',
-                        right: '220px',
-                        margin: '10px',
-                        padding: '8px 12px',
-                        fontWeight: 'bold',
-                        backgroundColor: "rgb(104,175,69)",
-                        color: "rgb(255, 255, 255)",
-                        border: "rgb(104,175,69) solid 2px",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                        fontSize: '16px'
-                    }}>規劃路線
-                    </button>
-                    <RouteInfo1 />
-                </div>
-                <div style={{marginTop:'30px'}}><RouteInfo2 /></div>
-                <div style={{marginTop:'30px'}}><RouteInfo3 /></div>
-                <div style={{marginTop:'30px'}}><RouteInfo4 /></div>
-                <div style={{marginTop:'30px'}}><RouteInfo5 /></div>
-                <div style={{marginTop:'30px'}}><RouteInfo6 /></div>
-            </div>
-            
-            <footer><Footer /></footer>
-        </>
-    )
-}
-export default homeRoute
+        <div>
+          <img alt="圖片載入中" src={Topimg} className={styles.topImage} />
+        </div>
+
+        <div className={styles.routeButtonWrapper}>
+          <button className={styles.routeButton}>規劃路線</button>
+          <RouteInfo1 />
+        </div>
+
+        <div className={styles.sectionSpacing}><RouteInfo2 /></div>
+        <div className={styles.sectionSpacing}><RouteInfo3 /></div>
+        <div className={styles.sectionSpacing}><RouteInfo4 /></div>
+        <div className={styles.sectionSpacing}><RouteInfo5 /></div>
+        <div className={styles.sectionSpacing}><RouteInfo6 /></div>
+      </div>
+
+      <footer><Footer /></footer>
+    </>
+  );
+};
+
+export default homeRoute;
