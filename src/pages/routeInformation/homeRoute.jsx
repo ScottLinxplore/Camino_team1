@@ -38,11 +38,11 @@ const homeRoute = () => {
                     </button>
                     <RouteInfo1 />
                 </div>
-                <div><RouteInfo2 /></div>
-                <div><RouteInfo3 /></div>
-                <div><RouteInfo4 /></div>
-                <div><RouteInfo5 /></div>
-                <div><RouteInfo6 /></div>
+                <div style={{marginTop:'30px'}}><RouteInfo2 /></div>
+                <div style={{marginTop:'30px'}}><RouteInfo3 /></div>
+                <div style={{marginTop:'30px'}}><RouteInfo4 /></div>
+                <div style={{marginTop:'30px'}}><RouteInfo5 /></div>
+                <div style={{marginTop:'30px'}}><RouteInfo6 /></div>
             </div>
             
             <footer><Footer /></footer>

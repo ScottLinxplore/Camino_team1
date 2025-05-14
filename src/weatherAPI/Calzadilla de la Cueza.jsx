@@ -134,8 +134,8 @@ const SaintJeanPiedDePort = () => {
   }, []);
 
   return (
-    <div style={{ width: "800px", height: "300px", margin: "auto", marginLeft: '450px', marginTop: '50px' }}>
-      <canvas style={{ margin: "auto" }} ref={chartRef} width={800} height={400}></canvas>
+    <div style={{ width: "800px", height: "300px", margin: "auto",marginLeft:'-100px',marginTop:'50px' }}>
+      <canvas style={{ margin: "auto" }} ref={chartRef} width={700} height={400}></canvas>
     </div>
   );
 };

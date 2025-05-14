@@ -79,38 +79,61 @@ const ShowCanvas = () => {
 
 
     return (
-        <div style={{ width: "100%", height: "100%", boxSizing: "border-box" }}>
+        <div style={{ width: "100%", boxSizing: "border-box" }}>
+            {/* 中央置中的主標題 */}
             <div style={{ textAlign: 'center', margin: '20px 0' }}>
-                <h2 style={{ fontSize: '35px' }}>{foundCity?.label + "每月平均氣候圖" || "城市名稱載入中"}</h2>
-                <h3 style={{ marginRight: '-550px' }}>選擇城市</h3>
-
-                {/* <Map className={styles.map} /> */}
-                <select style={{ marginRight: '-550px' }} value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
-                    {cities.map(city => (
-                        <option key={city.value} value={city.value}>
-                            {city.label}
-                        </option>
-                    ))}
-                </select>
-
+                <h2 style={{ fontSize: '35px', zIndex: 2, position: 'relative' }}>
+                    {foundCity?.label + " 每月平均氣候圖"}
+                </h2>
             </div>
+
+            {/* 地圖 + 圖表 + 城市選擇 */}
             <div style={{
                 display: 'flex',
-                border: 'black 3px solid',
-                overflow:'hidden',
+                position: 'relative',
                 height: '500px',
-                width: '1300px',
-                maxWidth: '1000px',
+                width: '100%',
+                maxWidth: '1200px',
                 margin: '0 auto',
             }}>
-                <Map className={styles.map} />
-                <div className={styles.chartWrapper}>
-                    {renderCityChart()}
+                {/* 左側地圖 */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                    <Map
+                        className={styles.map}
+                        // 接收onCityClick事件，將從map內傳出的label接收
+                        // 並對應到option內的值，找到該值並顯示城市名稱
+                        onCityClick={(label) => {
+                            // 找到對應 value
+                            const found = cities.find(city => city.label === label);
+                            if (found) {
+                                setSelectedCity(found.value);
+                            }
+                        }}
+                    />
+                    </div>
+
+                {/* 右側 chart + 選單 */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                    {/* 選擇城市欄位 (靠右) */}
+                    <div style={{ textAlign: 'right', paddingRight: '30px', marginBottom: '10px' }}>
+                        <h3 style={{ marginBottom: '10px', marginLeft: 'auto', marginRight: 'auto' }}>選擇城市</h3>
+                        <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
+                            {cities.map(city => (
+                                <option key={city.value} value={city.value}>
+                                    {city.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    {/* 圖表 */}
+                    <div style={{ maxWidth: '100%', height: '100%' }}>
+                        {renderCityChart()}
+                    </div>
                 </div>
             </div>
-
-
         </div>
+
     )
 }
 export default ShowCanvas
