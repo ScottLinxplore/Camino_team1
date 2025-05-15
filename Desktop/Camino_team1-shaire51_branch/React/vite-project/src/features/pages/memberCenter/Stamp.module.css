@@ -1,0 +1,96 @@
+/* Stamp.module.css */
+
+.pageContainer {
+  font-family: sans-serif;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.topImage {
+  width: 600px;
+  margin-top: 30px;
+}
+
+.backButton {
+  display: flex;
+  width: 150px;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(104, 175, 69);
+  color: white;
+  border: 2px solid rgb(104, 175, 69);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stampCard {
+  width: 1000px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardHeader img {
+  object-fit: cover;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.cardTitle p {
+  margin: auto;
+}
+
+.cardTitle p:last-child {
+  margin: 0;
+}
+
+.mainImage {
+  display: flex;
+  justify-content: center;
+}
+
+.mainImage img {
+  width: 80%;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.cardDetails ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.link {
+  color: #1a73e8;
+  text-decoration: underline;
+}

@@ -1,0 +1,67 @@
+.accountContainer {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.accountTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.accountLabel {
+  width: 80px;
+  font-weight: bold;
+  color: #444;
+}
+
+.accountInput {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.accountButtons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.accountButtons button {
+  padding: 0.5rem 1.2rem;
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.accountButtons button:hover {
+  background-color: #2d3748;
+}
+
+.accountButton {
+  padding: 0.5rem 1.2rem;
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.accountButton:hover {
+  background-color: #2d3748;
+}
