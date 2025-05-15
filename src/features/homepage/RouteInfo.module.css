@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+  font-size: 64px;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+  color: #004547;
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  flex-wrap: wrap;
+  padding: 2vh 5vw;
+}
+
+/* 動畫區域包住所有卡片 */
+.card-fade {
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: fade 0.8s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

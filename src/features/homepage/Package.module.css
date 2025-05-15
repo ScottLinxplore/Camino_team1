@@ -1,0 +1,30 @@
+.title {
+  text-align: center;
+  font-size: 64px;
+  color: #004547;
+  margin: 8vh 2vh;
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  flex-wrap: wrap;
+  padding: 2vh 5vw;
+}
+
+.card-fade {
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: fade 0.8s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

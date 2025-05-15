@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  width: 100vw;
+  height: 100vw;
+  background-image: url("./images/sky (10).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.road {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.rightfoot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 80%;
+  object-fit: cover;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 右下角朝聖之路大標 */
+.camino {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: white;
+  opacity: 0.7;
+  font-size: 8rem;
+  z-index: 4;
+  font-size: 150px;
+  justify-content: center;
+}
+
+/* 名言區 */
+.content {
+  width: 35%;
+  position: absolute;
+  bottom: 23%;
+  left: 3%;
+  z-index: 4;
+  color: black;
+}
+
+.contentTitle {
+  padding: 2% 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contentText {
+  color: #004547;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+
+.contentText span {
+  font-size: 1rem;
+  padding: 2%;
+  color: #7F7F7F;
+}
+
+.content a {
+  padding: 12px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #008A8E;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.content a:hover {
+  background-color: #076A6D;
+}

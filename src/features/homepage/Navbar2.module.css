@@ -1,0 +1,97 @@
+.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: white;
+  gap: 40px;
+  margin-top:0;
+  transition: all 0.3s ease-in;
+  width: 70%;
+  justify-content: center;
+
+  /* position: sticky;
+  top: 0;
+  display: flex;
+  gap: 40px;
+  width: 70%;
+  z-index: 500;
+  margin-top: 10%; */
+  /* color: red; */
+}
+
+/* 單一項目 */
+.navItem {
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+
+.navItem:hover {
+  color: gray !important;
+  border-bottom: 1px solid gray;
+  /* transform: scale(1.07); */
+}
+
+/* dropdown 結構容器 */
+.navItemWithDropdown {
+  position: relative;
+}
+
+/* hover 後出現 dropdown */
+.navItemWithDropdown:hover .dropdownMenu {
+  /* display: flex; */
+  opacity: 1;
+  visibility: visible;
+  margin-top: 5%;
+}
+
+.dropdownMenu {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  left: -20%;
+  flex-direction: row;
+  padding: 10px;
+  /* z-index: 999; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 20%);
+  /* 淡入設定 */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 左右欄結構 */
+.dropdownCol {
+  list-style: none;
+  padding: 0 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+}
+
+.dropdownCol>li {
+  margin-bottom: 5%;
+  transition: transform 0.3s ease-in;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+    transform: scale(1.07);
+  }
+}

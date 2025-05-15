@@ -1,0 +1,120 @@
+.titleArea {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+
+  .title {
+    font-size: 64px;
+    color: #004547;
+  }
+}
+
+.descriptionArea {
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  padding: 2vh 5vw;
+}
+
+.descriptionArea p {
+  text-align: left;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 5vw 2vh 0;
+}
+
+.showMapArea {
+  flex: 1 1 50%;
+  min-width: 280px;
+}
+
+.imgArea img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.infoArea {
+  flex: 1 1 40%;
+  min-width: 280px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.routeTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.routeTable thead tr:first-child th {
+  background-color: #e0e0e0;
+  text-align: left;
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+}
+
+.routeTable thead tr:nth-child(2) {
+  background-color: #e0e0e0;
+}
+
+.routeTable th,
+.routeTable td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.routeTable tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.routeDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.routeDescription a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.routeDescription a:hover {
+  text-decoration: underline;
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.routeButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008A8E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+
+.routeButton:hover {
+  background-color: #076A6D;
+}
