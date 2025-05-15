@@ -1,0 +1,13 @@
+/* P1_PlainingRoute.module.css */
+.container {
+  margin-top: 30px;
+  position: relative;
+}
+
+.title {
+  font-size: 5em;
+  position: absolute;
+  top: 92%;
+  left: 12%;
+  z-index: 3;
+}

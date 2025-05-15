@@ -1,0 +1,32 @@
+下載 ngrok
+前往官方網站 👉 https://ngrok.com/download
+點「Download for Windows (64-bit)」
+下載後解壓縮，會看到一個檔案：ngrok.exe
+把它放在一個好找的資料夾（建議放在：C:\ngrok）
+切換到你 ngrok.exe 的資料夾：
+
+
+步驟 1：註冊 ngrok 帳號 
+👉 前往：https://dashboard.ngrok.com/signup
+📩 輸入 email、設定密碼並「完成 email 驗證」
+
+步驟 2：取得你的 authtoken
+登入後進入這頁：https://dashboard.ngrok.com/get-started/your-authtoken
+
+複製畫面中的 authtoken（看起來像一串亂碼）
+
+步驟 3：在終端機輸入 authtoken   重要~~!! (在有ngrok的檔案裡執行CMD 要另外開一個VS)
+
+ngrok config add-authtoken 2wtifawgV5SLetDxuGTCmzSSfH7_6NVCYFoSNQL89Y4ZmauuE
+
+執行後會顯示：
+Authtoken saved to configuration file: C:\Users\<你的使用者>\.ngrok2\ngrok.yml
+
+ 步驟 4：再次啟動 ngrok 
+
+ngrok http 3000
+這次應該會成功 🎉 並顯示：
+
+Forwarding https://abcd1234.ngrok.io -> http://localhost:3000
+
+在網站打https://abcd1234.ngrok.io就可以了(結帳網站確認鍵綁連結到這裡)
