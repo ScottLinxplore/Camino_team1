@@ -1,0 +1,193 @@
+.planing-plane {
+  padding: 2rem;
+  width: 100%;
+}
+
+.route_name h3 {
+  font-size: 2rem;
+  color: #6c90a9;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.calendar-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.calendar-group {
+  position: relative;
+  width: 100px;
+}
+
+.calendar-card {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  border: 5px solid #b8d6aa;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Microsoft JhengHei", sans-serif;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+.calendar-header {
+  background-color: #b8d6aa;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendar-body {
+  background-color: white;
+  padding: 8px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 6px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f39c12;
+  z-index: 2;
+}
+
+.label {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.timeline-line {
+  width: 40px;
+  height: 6px;
+  background-color: #ddd;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+.timeline-line.long {
+  width: 250px;
+}
+
+.timeline-line.completed {
+  background-color: #b8d6aa;
+}
+
+.timeline-line.long2 {
+  width: 100px;
+  background-color: rgb(221, 221, 221);
+}
+
+.timeline-line.blue-line {
+  background-color: #7fabf3;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-right: 8px;
+}
+
+.flight-card {
+  border: 2px solid #ccc;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  width: 350px;
+}
+
+.flight-card:hover {
+  border-color: #2d72d9;
+}
+
+.flight-card.selected {
+  background-color: #cfe6ff;
+  border-color: #2d72d9;
+}
+
+.flight-card.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  background-color: #eee;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.route {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.price,
+.duration {
+  font-size: 14px;
+  color: #555;
+}
+
+.flight-list-container {
+  display: flex;
+  justify-content: center;
+  gap: 11rem;
+}
+
+.plane-on-dot {
+  font-size: 2rem;
+}
+
+.button-group {
+  width: 78%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.departurecheck {
+}
+
+.returncheck {
+}
+
+.departure-flight-list {
+}
+
+.Return-flight-list {
+}
+
+.fight-text {
+}
+
+.flight-time {
+}
+
+.ticket-money {
+}

@@ -1,0 +1,53 @@
+.accommodation-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-address {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.card-body {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.card-price {
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+}
