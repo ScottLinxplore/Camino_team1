@@ -1,0 +1,29 @@
+/* 改改改改改改改改改改 */
+.selectBox {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.mapWrapper {
+  height: 300px;
+  width: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mapImage {
+  width: 1400px;
+  transform: translate(-280px, -80px) scale(1.1);
+  position: absolute;
+}
+
+.routeSvg {
+  width: 290%;
+  height: 290%;
+  position: absolute;
+  top: -70px;
+  left: -700px;
+  z-index: 1;
+  pointer-events: none;
+}

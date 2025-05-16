@@ -1,0 +1,58 @@
+.accommodation-card {
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* width: 80%; */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+
+.card-header {
+  display: flex;
+  /* justify-content: center;  */
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-name {
+  font-weight: bold;
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-address {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.card-body {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.card-price {
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+}

@@ -1,0 +1,73 @@
+.left {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  img {
+    width: 10%;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.right {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  /* width: 4%; */
+  text-align: end;
+  font-size: 18px;
+  /* border: 1px blue solid; */
+  white-space: nowrap;
+}
+
+.link {
+  transition: color 0.8s ease-out;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    transition: color 0.8s ease-out;
+  }
+}
+
+/* 登入icon */
+.userIconWrapper {
+  position: relative;
+  cursor: pointer;
+  width: 80%;
+}
+
+.userIcon {
+  transition: color 0.3s ease;
+  margin-right: 10%;
+}
+
+.userIcon:hover {
+  color: gray !important;
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+/* 登出 */
+.logout {
+  transition: color 0.3s ease;
+}
+
+.logout:hover {
+  color: gray !important;
+  cursor: pointer;
+  transform: scale(1.07);
+}

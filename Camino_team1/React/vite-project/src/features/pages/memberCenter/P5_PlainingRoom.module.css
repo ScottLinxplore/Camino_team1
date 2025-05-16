@@ -1,0 +1,281 @@
+/* 改改改改改改改改改改 */
+.planingRoom {
+  width: 100%;
+}
+
+.routeName {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.routeName h3 {
+  font-size: 2rem;
+  color: #6c90a9;
+  padding-top: 5rem;
+}
+
+.calendarContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.calendarGroup {
+  position: relative;
+  width: 100px;
+}
+
+.calendarCard {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  border: 5px solid #b8d6aa;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Microsoft JhengHei", sans-serif;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+.calendarHeader {
+  background-color: #b8d6aa;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendarBody {
+  background-color: white;
+  padding: 8px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.timelineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f39c12;
+  z-index: 2;
+}
+
+.planeOnDot {
+  font-size: 2rem;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.timelineLine {
+  width: 40px;
+  height: 6px;
+  background-color: #ddd;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+.long {
+  width: 250px;
+}
+.short {
+  width: 60px;
+}
+
+.long2 {
+  width: 100px;
+}
+
+.blueLine {
+  background-color: #7fabf3;
+}
+
+.completed {
+  background-color: #b8d6aa;
+}
+
+.timelineLine.completed {
+  background-color: #b8d6aa;
+}
+
+.roomTypeText {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.roomTypeText h3 {
+  color: #666666;
+  font-size: 1.5rem;
+}
+
+.roomSelectionContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.roomSelectionLeft {
+  background: #fff;
+  padding: 1.5rem;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 4px solid #dbdbdb;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  box-sizing: border-box;
+}
+
+.datePickerContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.datePickerContainer select {
+  width: 150px;
+  height: 30px;
+  padding: 0 16px;
+  text-align: center;
+  border-radius: 999px;
+  background-color: #e0e0e0;
+  border: none;
+  font-size: 20px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.roomOptions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.submitButton {
+  width: 90%;
+  background-color: #90d27b;
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  margin: 1rem 1rem;
+}
+
+.submitButton:hover {
+  background-color: #7cc766;
+}
+
+.arrowDivider {
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-left: 60px solid #ccc;
+  margin-left: 2rem;
+  opacity: 0.6;
+  margin-bottom: 2.5rem;
+}
+
+.roomSelectionRight {
+  max-height: 360px;
+  overflow-y: auto;
+  margin-left: 2rem;
+  padding: 0 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  border-right: 4px solid #dbdbdb;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.roomRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.roomRow span {
+  width: 60px;
+  font-size: 16px;
+  color: #333;
+}
+
+.roomRow select {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ddd;
+  font-size: 15px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 25px;
+  width: 500px;
+  height: 300px;
+}
+
+.calculateButton {
+  margin-top: 2rem;
+}
+
+.modal ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.buttonGroup {
+  margin: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 76%;
+  gap: 2rem;
+}

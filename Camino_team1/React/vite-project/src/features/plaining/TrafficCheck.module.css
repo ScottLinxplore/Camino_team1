@@ -1,0 +1,57 @@
+/* 改改改改改改改改改改改改改改改改 */
+.sectionWrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sectionTitle {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.ticketBox {
+  background-color: #d0ecff;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-right: 10px;
+  width: 720px;
+  /* max-width: 720px; */
+  box-sizing: border-box;
+}
+
+.ticketDetail {
+  padding: 10px;
+  background-color: #e4f8ff;
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+}
+
+.ticketRow {
+  display: flex;
+  gap: 1px;
+  padding: 3px 0;
+  font-size: 0.95rem;
+}
+
+.ticketRow span {
+  flex-shrink: 0;
+}
+
+.airline {
+  width: 120px;
+}
+.date {
+  width: 120px;
+}
+.route {
+  width: 170px;
+}
+.time {
+  width: 180px;
+}
+.price {
+  width: 120px;
+}

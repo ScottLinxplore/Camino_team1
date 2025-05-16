@@ -1,0 +1,187 @@
+/* 改改改改改改改改改改改 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  caret-color: transparent; /* 隱藏灰色游標 */
+}
+
+.planingdate {
+  width: 100%;
+  height: auto;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+.route_name {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.route_name h3 {
+  font-size: 2rem;
+  color: #6c90a9;
+  padding-top: 5rem;
+}
+.calendar-container {
+  display: flex;
+  justify-content: space-around;
+}
+.calendar-card {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  border: 5px solid #b8d6aa;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Microsoft JhengHei", sans-serif;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+.calendar-header {
+  background-color: #b8d6aa;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendar-body {
+  background-color: white;
+  padding: 8px 0;
+
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.calendar-error {
+  position: absolute;
+  top: 115px; /* 視情況調 */
+  left: 0;
+  color: red;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.calendar-group {
+  position: relative;
+  width: 100px; /* 和 calendar-card 一樣寬 */
+}
+
+/* 標題區：月份 + 年 */
+.react-datepicker__current-month {
+  color: #4caf50;
+  font-weight: bold;
+}
+/* 每一天 */
+.react-datepicker__day {
+  color: #333;
+  background-color: #eee;
+  margin: 2px;
+  border-radius: 4px;
+  width: 36px;
+  /* line-height: 36px; */
+}
+/* 選中的那一天 */
+.react-datepicker__day--selected {
+  background-color: #a5e6a1 !important;
+  color: #000;
+  font-weight: bold;
+}
+
+/* hover 效果 */
+.react-datepicker__day:hover {
+  background-color: #d0f5cd;
+}
+
+/* 今天的樣式 */
+.react-datepicker__day--today {
+  border: 1px solid #999;
+}
+
+/* 非當月的日期 */
+.react-datepicker__day--outside-month {
+  background-color: #f0f0f0;
+  color: #aaa;
+}
+
+/* 星期標題（例如日一二三） */
+.react-datepicker__day-name {
+  color: #333;
+  background-color: #f6f6f6;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 36px;
+  line-height: 36px;
+}
+
+/* 箭頭按鈕 */
+.react-datepicker__navigation-icon::before {
+  border-color: #4caf50;
+}
+
+.se-date {
+  border: 2px solid blue;
+  margin-left: 300px;
+}
+/* 時間縣 */
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  flex-wrap: wrap;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f39c12; /* 橘色圓點 */
+  z-index: 2;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.timeline-line {
+  width: 40px;
+  height: 6px;
+  background-color: #ddd;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+.timeline-line.completed {
+  background-color: #b8d6aa;
+}
+
+.timeline-step.completed .dot {
+  background-color: #f39c12;
+}
+
+.timeline-line.long {
+  width: 250px;
+}
+.timeline-line.long2 {
+  width: 100px;
+  background-color: rgb(221, 221, 221);
+}
+
+/* 按鈕 */
+.button-group {
+  width: 78%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}

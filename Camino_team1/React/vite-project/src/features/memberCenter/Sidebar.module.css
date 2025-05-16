@@ -1,0 +1,33 @@
+.sidebar {
+  padding: 1rem;
+  width: 200px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.sidebar li.main {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.sidebar li.main .icon {
+  margin-right: 0.5rem;
+}
+
+.sidebar li:not(.main) {
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}

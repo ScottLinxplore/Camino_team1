@@ -1,0 +1,132 @@
+/* 改改改改改改改改改改改改 */
+.routeName {
+  text-align: center;
+  margin-top: 2rem;
+}
+.routeName h3 {
+  font-size: 2rem;
+  color: #6c90a9;
+  padding-top: 5rem;
+}
+.calendarContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.calendarGroup {
+  position: relative;
+  width: 100px;
+}
+
+.timelineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f39c12;
+  z-index: 2;
+}
+
+.planeOnDot {
+  font-size: 2rem;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.timelineLine {
+  width: 40px;
+  height: 6px;
+  background-color: #ddd;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+.timelineLine.long {
+  width: 250px;
+}
+.timelineLine.long2 {
+  width: 100px;
+}
+.timelineLine.blueLine {
+  background-color: #7fabf3;
+}
+.timelineLine.completed {
+  background-color: #b8d6aa;
+}
+
+.dayChooseWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.leftCard {
+  display: inline-block;
+  position: relative;
+  /* bottom: 0rem; */
+}
+
+.rightCard {
+  display: inline-block;
+  position: relative;
+  bottom: 0rem;
+  top: 2.3rem;
+  /* height: 280px; */
+}
+
+.buttonArea {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 1rem 1.5rem;
+  width: 85%;
+  box-sizing: border-box;
+}
+
+.calendarCard {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  border: 5px solid #b8d6aa;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Microsoft JhengHei", sans-serif;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+.calendarHeader {
+  background-color: #b8d6aa;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendarBody {
+  background-color: white;
+  padding: 8px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}

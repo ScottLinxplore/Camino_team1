@@ -1,0 +1,88 @@
+.footer {
+  background-color: #ddd;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.footerRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.footerLeft {
+  flex: 1 1 30%;
+  padding: 10px;
+  text-align: left;
+}
+
+.socialIcons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.socialIcon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1 1 70%;
+}
+
+.footerLinksWrapper {
+  padding: 20px 0;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.linkBox {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.linkBox a {
+  color: #000;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+.linkBox a:hover {
+  text-decoration: underline;
+}
+
+.subLink {
+  display: block;
+}
+
+.footerBottom {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 手機版 RWD */
+@media (max-width: 768px) {
+  .subLink {
+    display: none;
+  }
+
+  /* .socialIcons {
+    justify-content: center;
+  } */
+}
