@@ -1,0 +1,14 @@
+/* 卡到順序=>用important蓋過 */
+/* 白色箭頭樣式 */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;          /* 改箭頭顏色 */
+  font-weight: bold !important;
+ 
+}
+
+/* 白色圓點樣式 */
+.swiper-pagination-bullet {
+    background: white !important;     /* 預設未選中圓點 */
+    opacity: 0.7 !important;
+  }

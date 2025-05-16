@@ -1,0 +1,53 @@
+.card {
+    background-color: white;
+    padding: 0;
+    /* 移除 padding，改由內部控制 */
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* 防止圖片超出邊界 */
+    display: flex;
+    flex-direction: column;
+}
+
+.imageWrapper {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    user-select: none;/*取消照片被選取*/
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.faicon{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  cursor: pointer; /*游標變小手*/
+  transition: color 0.5s ease;
+}
+
+.faicon:hover {
+    color: greenyellow; 
+    transform: scale(1.1);
+  }
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.route {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+}

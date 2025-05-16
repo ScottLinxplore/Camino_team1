@@ -1,0 +1,93 @@
+.card {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+
+  .upper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* 比例 */
+    position: relative;
+    overflow: hidden;
+
+/* 愛心css */
+    .heart {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      font-size: 24px;
+      color: #bbb;
+      cursor: pointer;
+      z-index: 2;
+      user-select: none;
+      color: #DAFF60;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .corner {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      svg {
+        position: absolute;
+        bottom: 0;
+        right: -1px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 70%;
+      }
+    }
+
+    .title {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      font-size: 40px;
+      font-weight: bold;
+      font-style: italic;
+      color: white;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+  }
+
+  .content {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    box-sizing: border-box;
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5vh;
+      font-size: 24px;
+      color: #444;
+    }
+
+    .cost {
+      font-size: 20px;
+      color: #444;
+    }
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-radius: 15px;
+}

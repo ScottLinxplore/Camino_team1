@@ -1,0 +1,66 @@
+/* Rectangle 184 */
+.boxContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.box {
+    position: relative;
+    /* 讓右上角 icon 能絕對定位 */
+    margin: 20px 30px 60px 30px;
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 27.6px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.box-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.box-text {
+    display: none;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 80px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    white-space: normal;
+}
+
+
+/* 顯示提示文字 */
+.tooltip-container:hover .box-text {
+    display: block;
+  }

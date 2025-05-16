@@ -1,0 +1,74 @@
+.card {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease-in;
+
+  .upper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /* 愛心css */
+    .heart {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 2;
+      user-select: none;
+      color: #DAFF60;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card:hover {
+    transform: scale(1.5);
+  }
+
+  .corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    svg {
+      position: absolute;
+      bottom: 0;
+      right: -1px;
+      width: 100%;
+      height: 100%;
+      opacity: 70%;
+      display: block;
+    }
+  }
+
+  .title {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 80%);
+    z-index: 2;
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-radius: 15px;
+}

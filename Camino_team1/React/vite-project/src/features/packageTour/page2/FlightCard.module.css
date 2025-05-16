@@ -1,0 +1,24 @@
+.flight-card {
+  min-width: 40%;
+  margin: 1rem;
+  flex: 1;
+}
+
+.flight-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  /* border: 2px solid green; */
+  text-align: left;
+}
+
+.flight-box {
+  background-color: #add8e6; /* 淺藍色 */
+  padding: 0.1rem;
+  /* border: 2px solid #2196f3; */
+  border-radius: 4px;
+  /* width: 500%; */
+}
+
+.duration {
+  text-decoration: underline;
+}
