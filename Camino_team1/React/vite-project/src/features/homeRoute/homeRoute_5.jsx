@@ -88,19 +88,7 @@ const HomeRoute = () => {
         <p>{cityIntro ? cityIntro.intro : "資料載入中"}</p>
         <button
           onClick={Toroute}
-          style={{
-            width: "150px",
-            height: "60px",
-            marginLeft: "250px",
-            marginBottom: "60px",
-            fontWeight: "bold",
-            backgroundColor: "rgb(104,175,69)",
-            color: "rgb(255, 255, 255)",
-            border: "rgb(104,175,69) solid 2px",
-            borderRadius: "8px",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
+          className="buttonMore"
         >
           查看更多
         </button>

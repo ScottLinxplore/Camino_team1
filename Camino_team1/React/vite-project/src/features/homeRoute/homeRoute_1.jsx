@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import foot from "./length.png";
 //useNavigate可以導到在app.js指定的路由"/"
 import { useNavigate } from "react-router-dom";
+import "./homeRoute.css"
 
 const HomeRoute = () => {
   // 初始化 navigate
@@ -87,20 +88,9 @@ const HomeRoute = () => {
       <div style={{ width: "400px", marginTop: "120px" }}>
         <p>{cityIntro ? cityIntro.intro : "資料載入中"}</p>
         <button
+          className="buttonMore"
           onClick={Toroute}
-          style={{
-            width: "150px",
-            height: "60px",
-            marginLeft: "250px",
-            marginBottom: "60px",
-            fontWeight: "bold",
-            backgroundColor: "rgb(104,175,69)",
-            color: "rgb(255, 255, 255)",
-            border: "rgb(104,175,69) solid 2px",
-            borderRadius: "8px",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
+
         >
           查看更多
         </button>

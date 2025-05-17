@@ -25,6 +25,12 @@
   font-size: 16px;
 }
 
+.backButton:hover {
+  background-color: rgb(189, 245, 161);
+  border: rgb(189, 245, 161);
+  color: rgb(147, 180, 151);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

@@ -27,8 +27,16 @@ const Froute = () => {
   function buy() {
     navigate("/page2");
   }
+  //改改改改改改這行(連到路線規劃時的routeId=1)
   function plan() {
-    navigate("/PlainingDate");
+    navigate("/PlainingDate", {
+      state:{
+        // 這裡的routeId變數名子，只是要將這個資料帶入到路線規劃那邊
+        // useLocation用來接收這裡useNavigate傳出去的state(在路線規劃那邊)
+        // item.route_id === parseInt(routeId))
+        routeId:1
+      }
+    });
   }
   //抓圖片
   useEffect(() => {
@@ -85,15 +93,14 @@ const Froute = () => {
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`${styles.tabButton} ${
-                activeTab === key ? styles.activeTab : styles.inactiveTab
-              }`}
+              className={`${styles.tabButton} ${activeTab === key ? styles.activeTab : styles.inactiveTab
+                }`}
             >
               {key === "weather"
                 ? "天氣預報"
                 : key === "altitude"
-                ? "城市天氣"
-                : "海拔圖示"}
+                  ? "城市天氣"
+                  : "海拔圖示"}
             </button>
           ))}
         </div>
@@ -241,3 +248,25 @@ const Froute = () => {
 };
 
 export default Froute;
+
+
+
+//                                         __----~~~~~~~~~~~------___
+//                                   .  .   ~~//====......          __--~ ~~
+//                   -.            \_|//     |||\\  ~~~~~~::::... /~
+//                ___-==_       _-~o~  \/    |||  \\            _/~~-
+//        __---~~~.==~||\=_    -_--~/_-~|-   |\\   \\        _/~
+//    _-~~     .=~    |  \\-_    '-~7  /-   /  ||    \      /
+//  .~       .~       |   \\ -_    /  /-   /   ||      \   /
+// /  ____  /         |     \\ ~-_/  /|- _/   .||       \ /
+// |~~    ~~|--~~~~--_ \     ~==-/   | \~--===~~        .\
+//          '         ~-|      /|    |-~\~~       __--~~
+//                      |-~~-_/ |    |   ~\_   _-~            /\
+//                           /  \     \__   \/~                \__
+//                       _--~ _/ | .-~~____--~-/                  ~~==.
+//                      ((->/~   '.|||' -_|    ~~-/ ,              . _||
+//                                 -_     ~\      ~~---l__i__i__i--~~_/
+//                                 _-~-__   ~)  \--______________--~~
+//                               //.-~~~-~_--~- |-------~~~~~~~~
+//                                      //.-~~~--\
+//                               神獸保佑，程式碼沒Bug!

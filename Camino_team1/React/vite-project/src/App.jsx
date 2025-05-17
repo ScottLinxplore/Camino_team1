@@ -9,6 +9,7 @@ import ExpandableCard from "./features/gearTips/ExpandableCard.jsx"; //card元�
 import MemberCenter from "./features/pages/memberCenter/index.jsx"; //會員中心
 import WeatherMap from "./features/weather/Weather.jsx"; // 天氣
 import VerifyPage from "./features/auth/VerifyPage"; //驗證
+
 import Location from "./features/pages/memberCenter/Location.jsx"; //新
 import Froute from "../src/features/pages/memberCenter/Froute.jsx"; //路線資訊
 import HomeRoute from "../src/features/pages/memberCenter/homeRoute.jsx"; //所有路線總覽
@@ -23,6 +24,7 @@ import Description_6 from "../src/features/sight_description/sight_des6.jsx";
 import Description_7 from "../src/features/sight_description/sight_des7.jsx";
 import Description_8 from "../src/features/sight_description/sight_des8.jsx";
 import Description_9 from "../src/features/sight_description/sight_des9.jsx";
+
 import Homepage from "./features/pages/memberCenter/Homepage.jsx"; //首頁
 import Navbar1 from "./features/homepage/Navbar1.jsx";
 import Footer from "./features/homepage/Footer.jsx";
@@ -41,6 +43,8 @@ import P_2_package from "../src/features/pages/memberCenter/Page2.jsx";
 import P_3_package from "../src/features/pages/memberCenter/Page3";
 import P_4_package from "../src/features/pages/memberCenter/Page4";
 import P_5_package from "../src/features/pages/memberCenter/Page5";
+
+import ScrollToTop from "./features/scrollToTop.jsx"; //  引入跳轉至頂部的元件
 
 function App() {
   const [routes, setRoutes] = useState([]); //Homepage  載入路線用
@@ -70,8 +74,12 @@ function App() {
     fetch("http://localhost:3001/api/routes")
       .then((res) => res.json())
       .then((data) => {
-        const sorted = data.sort((a, b) => a.route_id - b.route_id);
-        setRoutes(sorted);
+        if (Array.isArray(data)) {
+          const sorted = data.sort((a, b) => a.route_id - b.route_id);
+          setRoutes(sorted);
+        } else {
+          console.error("⚠️ 回傳的不是陣列", data);
+        }
       })
       .catch((err) => console.error("路線讀取失敗", err));
   }, []);
@@ -87,6 +95,7 @@ function App() {
         />
       </nav>
       {/* 路由設定 */}
+      <ScrollToTop />
       <Routes>
         {/* path = 對應到的路由網址  會顯示 LoginRegister 元素  */}
         <Route path="/" element={<Homepage routes={routes} />} />

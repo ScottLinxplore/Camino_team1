@@ -32,6 +32,12 @@
   font-size: 16px;
 }
 
+.routeButton:hover {
+  background-color: rgb(189, 245, 161);
+  border: rgb(189, 245, 161);
+  color: rgb(147, 180, 151);
+}
+
 .sectionSpacing {
   margin-top: 30px;
 }

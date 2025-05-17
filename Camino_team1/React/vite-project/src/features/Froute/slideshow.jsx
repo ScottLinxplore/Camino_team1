@@ -51,8 +51,8 @@ const Slideshow = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://img1.pixhost.to/images/5614/596521681_sight8.png"
-            alt="圖片3"
+            src="https://img1.pixhost.to/images/5654/597073946_sight_3-2.jpg"
+            alt="圖片4"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </SwiperSlide>
@@ -60,7 +60,7 @@ const Slideshow = () => {
         <SwiperSlide>
           <img
             src="https://img1.pixhost.to/images/5541/595592071_description.png"
-            alt="圖片3"
+            alt="圖片"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </SwiperSlide>

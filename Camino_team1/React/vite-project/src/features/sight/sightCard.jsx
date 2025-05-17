@@ -108,18 +108,8 @@ const SightCard = ({
 
       {/* 更多按鈕 */}
       <button
+        className="button-more"
         onClick={more}
-        style={{
-          backgroundColor: "#76cc36",
-          color: "#fff",
-          border: "none",
-          borderRadius: "6px",
-          padding: "8px 16px",
-          fontWeight: "bold",
-          cursor: "pointer",
-          position: "relative",
-          float: "right",
-        }}
       >
         more →
       </button>

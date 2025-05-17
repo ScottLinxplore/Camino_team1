@@ -1,0 +1,19 @@
+.buttonMore:hover {
+    background-color: rgb(189, 245, 161);
+    border: rgb(189, 245, 161);
+    color: rgb(147, 180, 151);
+}
+
+.buttonMore {
+    width: 150px;
+    height: 60px;
+    margin-Left: 250px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    background-color: rgb(104,175,69);
+    color: rgb(255, 255, 255);
+    border: rgb(104,175,69) solid 2px;
+    border-radius: 8px;
+    cursor:pointer;
+    font-size: "16px"
+}

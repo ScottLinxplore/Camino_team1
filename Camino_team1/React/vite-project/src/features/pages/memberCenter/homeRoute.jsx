@@ -8,9 +8,17 @@ import RouteInfo3 from "../../homeRoute/homeRoute_3";
 import RouteInfo4 from "../../homeRoute/homeRoute_4";
 import RouteInfo5 from "../../homeRoute/homeRoute_5";
 import RouteInfo6 from "../../homeRoute/homeRoute_6";
-import styles from "./homeRoute.module.css"; // ⭐ 引入 CSS Module
+import styles from "./homeRoute.module.css"; //  引入 CSS Module
+import { useNavigate } from "react-router-dom";
+
 
 const homeRoute = () => {
+  // 初始化 navigate
+  const navigate = useNavigate();
+  // 連接到路線規劃
+  function toplan() {
+    navigate("/PlainingDate")
+  }
   return (
     <>
       <div className={styles.pageContainer}>
@@ -21,7 +29,11 @@ const homeRoute = () => {
         </div>
 
         <div className={styles.routeButtonWrapper}>
-          <button className={styles.routeButton}>規劃路線</button>
+          <button
+            className={styles.routeButton}
+            onClick={toplan}>
+            規劃路線
+          </button>
           <RouteInfo1 />
         </div>
 
