@@ -11,11 +11,13 @@ const LoginRegister = ({ setIsLoggedIn }) => {
   const isLoggedIn = localStorage.getItem("userId") !== null; // ✅ 確保 Navbar1 有登入狀態
 
   return (
-    <div className={`container ${isRegister ? "right-panel-active" : ""}`}>
+    <div className="login-page-wrapper">
       <Navbar1 isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      <RegisterForm isVisible={isRegister} />
-      <LoginForm isVisible={!isRegister} setIsLoggedIn={setIsLoggedIn} />
-      <OverlayPanel setIsRegister={setIsRegister} />
+      <div className={`container ${isRegister ? "right-panel-active" : ""}`}>
+        <RegisterForm isVisible={isRegister} />
+        <LoginForm isVisible={!isRegister} setIsLoggedIn={setIsLoggedIn} />
+        <OverlayPanel setIsRegister={setIsRegister} />
+      </div>
     </div>
   );
 };
