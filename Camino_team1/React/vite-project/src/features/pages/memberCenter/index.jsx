@@ -11,7 +11,12 @@ const MemberCenter = ({ userId }) => {
   const [currentSection, setCurrentSection] = useState("account"); //預設元件是 account 這個是可以變的 透過底下的 顯示對應元件
 
   return (
-    <div style={{ display: "flex" }}>
+    <div
+      style={{
+        display: "flex",
+        minHeight: "80vh", // ✅ 撐滿整個畫面高度
+      }}
+    >
       {/* 傳入控制函式 setCurrentSection 給 Sidebar  */}
       <Sidebar setCurrentSection={setCurrentSection} />
       <div style={{ flex: 1, padding: "1rem" }}>

@@ -1,0 +1,15 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1; /* 撐滿主體 */
+  /* padding: 2rem 1rem; */
+  background-color: #f8f9fa;
+}
+
+.footer {
+  flex-shrink: 0;
+}
