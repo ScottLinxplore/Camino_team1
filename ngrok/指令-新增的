@@ -1,0 +1,13 @@
+ngrok config add-authtoken 2wtifawgV5SLetDxuGTCmzSSfH7_6NVCYFoSNQL89Y4ZmauuE
+
+執行後會顯示：
+Authtoken saved to configuration file: C:\Users\<你的使用者>\.ngrok2\ngrok.yml
+
+ 步驟 4：再次啟動 ngrok 
+
+ngrok http 3002
+這次應該會成功 🎉 並顯示：
+
+Forwarding https://abcd1234.ngrok.io -> http://localhost:3002
+
+在網站打https://abcd1234.ngrok.io就可以了(結帳網站確認鍵綁連結到這裡)
