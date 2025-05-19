@@ -1,3 +1,5 @@
+// 改改改改改改改改改改改改
+
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import DatePicker from "react-datepicker";
@@ -281,40 +283,22 @@ export default function PlainingPlane() {
         </div>
       </div>
 
-      <div className={styles["checkbox-container"]}>
-        <label className={styles.departurecheck}>
-          <input
-            type="checkbox"
-            checked={showDepartureFlights}
-            onChange={() => {
-              const newValue = !showDepartureFlights;
-              setShowDeparture(newValue);
-              if (!newValue) {
-                setSelectedDepartureFlight(null);
-              }
-            }}
-          />
-          去程班機:
-        </label>
-
-        <label className={styles.returncheck}>
-          <input
-            type="checkbox"
-            checked={showReturnFlights}
-            onChange={() => {
-              const newValue = !showReturnFlights;
-              setShowReturn(newValue);
-              if (!newValue) {
-                setSelectedReturnFlight(null);
-              }
-            }}
-          />
-          回程班機:
-        </label>
-      </div>
-
       <div className={styles["flight-list-container"]}>
         <div className={styles["departure-flight-list"]}>
+          <label className={styles.departurecheck}>
+            <input
+              type="checkbox"
+              checked={showDepartureFlights}
+              onChange={() => {
+                const newValue = !showDepartureFlights;
+                setShowDeparture(newValue);
+                if (!newValue) {
+                  setSelectedDepartureFlight(null);
+                }
+              }}
+            />
+            去程班機:
+          </label>
           {departureFlights.map((flight) => (
             <div
               key={flight.id}
@@ -338,6 +322,20 @@ export default function PlainingPlane() {
         </div>
 
         <div className={styles["Return-flight-list"]}>
+          <label className={styles.returncheck}>
+            <input
+              type="checkbox"
+              checked={showReturnFlights}
+              onChange={() => {
+                const newValue = !showReturnFlights;
+                setShowReturn(newValue);
+                if (!newValue) {
+                  setSelectedReturnFlight(null);
+                }
+              }}
+            />
+            回程班機:
+          </label>
           {returnFlights.map((flight) => (
             <div
               key={flight.id}

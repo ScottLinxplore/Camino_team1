@@ -1,3 +1,4 @@
+/* 改改改改改改改改改改 */
 .planingRoom {
   width: 100%;
 }
@@ -8,8 +9,8 @@
 }
 
 .routeName h3 {
-  font-size: 2rem;
-  color: #6c90a9;
+  font-size: 40px;
+  color: #004547;
   padding-top: 5rem;
 }
 
@@ -27,7 +28,7 @@
   display: inline-block;
   width: 100px;
   text-align: center;
-  border: 5px solid #b8d6aa;
+  border: 5px solid #50b9bd;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -36,7 +37,7 @@
 }
 
 .calendarHeader {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
   padding: 6px;
   font-size: 16px;
   font-weight: bold;
@@ -102,7 +103,7 @@
 }
 
 .blueLine {
-  background-color: #7fabf3;
+  background-color: #50b9bd;
 }
 
 .completed {
@@ -110,7 +111,7 @@
 }
 
 .timelineLine.completed {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
 }
 
 .roomTypeText {
@@ -180,7 +181,7 @@
 
 .submitButton {
   width: 90%;
-  background-color: #90d27b;
+  background-color: #50b9bd;
   color: #0a0a0a;
   font-weight: bold;
   border: none;
@@ -194,7 +195,7 @@
 }
 
 .submitButton:hover {
-  background-color: #7cc766;
+  background-color: #076a6d;
 }
 
 .arrowDivider {
@@ -272,9 +273,9 @@
 }
 
 .buttonGroup {
-  margin-top: 2rem;
+  margin: 2rem;
   display: flex;
   justify-content: flex-end;
-  width: 78%;
+  width: 76%;
   gap: 2rem;
 }

@@ -1,10 +1,11 @@
+/* 改改改改改改改改改改改改 */
 .routeName {
   text-align: center;
   margin-top: 2rem;
 }
 .routeName h3 {
-  font-size: 2rem;
-  color: #6c90a9;
+  font-size: 40px;
+  color: #004547;
   padding-top: 5rem;
 }
 .calendarContainer {
@@ -66,10 +67,10 @@
   width: 100px;
 }
 .timelineLine.blueLine {
-  background-color: #7fabf3;
+  background-color: #50b9bd;
 }
 .timelineLine.completed {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
 }
 
 .dayChooseWrapper {
@@ -84,13 +85,15 @@
 .leftCard {
   display: inline-block;
   position: relative;
+  /* bottom: 0rem; */
 }
 
 .rightCard {
   display: inline-block;
   position: relative;
-  top: 25px;
-  height: 280px;
+  bottom: 0rem;
+  top: 2.3rem;
+  /* height: 280px; */
 }
 
 .buttonArea {
@@ -106,7 +109,7 @@
   display: inline-block;
   width: 100px;
   text-align: center;
-  border: 5px solid #b8d6aa;
+  border: 5px solid #50b9bd;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -115,7 +118,7 @@
 }
 
 .calendarHeader {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
   padding: 6px;
   font-size: 16px;
   font-weight: bold;

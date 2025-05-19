@@ -28,7 +28,7 @@
 
 /* 標題區：月份 + 年 */
 .datepicker :global(.react-datepicker__current-month) {
-  color: #4caf50;
+  color: #008a8e;
   font-weight: bold;
 }
 
@@ -49,14 +49,14 @@
 
 /* 選中的那一天(選擇確定後) */
 .datepicker :global(.react-datepicker__day--selected) {
-  background-color: #a5e6a1 !important;
+  background-color: #1da7ac !important;
   color: #000;
   font-weight: bold;
 }
 
 /* 結束日期樣式(選擇確定後) */
 .datepicker :global(.react-datepicker__day--range-end) {
-  background-color: #a5e6a1 !important;
+  background-color: #1da7ac !important;
   font-weight: bold;
 }
 
@@ -72,7 +72,7 @@
 }
 /* 起始日顏色 (選擇中的時候) */
 .datepicker :global(.react-datepicker__day--selecting-range-start) {
-  background-color: #a5e6a1 !important;
+  background-color: #1da7ac !important;
   font-weight: bold;
   /* color: white; */
   /* border-radius: 50%; */
@@ -80,7 +80,7 @@
 
 /* 滑鼠移到日期上的效果*/
 .datepicker :global(.react-datepicker__day:hover) {
-  background-color: #a5e6a1 !important;
+  background-color: #1da7ac !important;
   font-weight: bold;
 }
 
@@ -102,7 +102,7 @@
 
 /* 箭頭按鈕 */
 .datepicker :global(.react-datepicker__navigation-icon::before) {
-  border-color: #4caf50;
+  border-color: #008a8e;
 }
 
 .datepicker {

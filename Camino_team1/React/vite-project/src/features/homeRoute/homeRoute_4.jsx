@@ -56,7 +56,7 @@ const HomeRoute = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          marginLeft: "100px",
+          marginLeft: "300px",
         }}
       >
         <h2 style={{ fontWeight: "bold" }}>
@@ -85,9 +85,7 @@ const HomeRoute = () => {
 
       <div style={{ width: "400px", marginTop: "120px" }}>
         <p>{cityIntro ? cityIntro.intro : "資料載入中"}</p>
-        <button
-          onClick={Toroute}
-          className="buttonMore"        >
+        <button onClick={Toroute} className="buttonMore">
           查看更多
         </button>
       </div>

@@ -26,7 +26,6 @@
   z-index: 0;
 }
 
-
 .road {
   position: relative;
   width: 100%;
@@ -96,7 +95,7 @@
 .contentText span {
   font-size: 1rem;
   padding: 2%;
-  color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 .content a {
@@ -104,11 +103,11 @@
   font-size: 20px;
   text-decoration: none;
   color: white;
-  background-color: #008A8E;
+  background-color: #008a8e;
   border-radius: 10px;
   transition: all 0.3s ease-in;
 }
 
 .content a:hover {
-  background-color: #076A6D;
+  background-color: #076a6d;
 }

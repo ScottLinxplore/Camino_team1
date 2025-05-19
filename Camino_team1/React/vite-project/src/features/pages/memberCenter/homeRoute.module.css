@@ -24,18 +24,15 @@
   margin: 10px;
   padding: 8px 12px;
   font-weight: bold;
-  background-color: rgb(104, 175, 69);
+  background-color: #008a8e;
   color: rgb(255, 255, 255);
-  border: 2px solid rgb(104, 175, 69);
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
 }
 
 .routeButton:hover {
-  background-color: rgb(189, 245, 161);
-  border: rgb(189, 245, 161);
-  color: rgb(147, 180, 151);
+  background-color: #076a6d;
 }
 
 .sectionSpacing {

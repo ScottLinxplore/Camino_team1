@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import foot from "./length.png";
 //useNavigate可以導到在app.js指定的路由"/"
 import { useNavigate } from "react-router-dom";
-import "./homeRoute.css"
+import "./homeRoute.css";
 
 const HomeRoute = () => {
   // 初始化 navigate
@@ -58,7 +58,7 @@ const HomeRoute = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          marginLeft: "100px",
+          marginLeft: "300px",
         }}
       >
         <h2 style={{ fontWeight: "bold" }}>
@@ -87,11 +87,7 @@ const HomeRoute = () => {
 
       <div style={{ width: "400px", marginTop: "120px" }}>
         <p>{cityIntro ? cityIntro.intro : "資料載入中"}</p>
-        <button
-          className="buttonMore"
-          onClick={Toroute}
-
-        >
+        <button className="buttonMore" onClick={Toroute}>
           查看更多
         </button>
       </div>

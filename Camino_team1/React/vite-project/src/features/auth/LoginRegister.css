@@ -77,8 +77,8 @@ input {
 }
 button {
   border-radius: 20px;
-  border: 1px solid #b0e993;
-  background-color: #b0e993;
+  border: 1px solid #008a8e;
+  background-color: #008a8e;
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -94,7 +94,7 @@ button.ghost {
 
 /* 錯誤提示 */
 .error-text {
-  color: #f43f5e;
+  color: #ffa407;
   font-size: 0.75rem;
   margin: -0.25rem 0 0.5rem 0.25rem;
   text-align: left;
@@ -137,7 +137,7 @@ button.ghost {
 }
 .forgot {
   font-size: 0.75rem;
-  color: red;
+  color: #ffa407;
   text-align: center;
   cursor: pointer;
   margin-top: 0.25rem;
@@ -158,7 +158,7 @@ button.ghost {
   transform: translateX(-100%);
 }
 .overlay {
-  background: #b0e993;
+  background: #008a8e;
   color: white;
   position: relative;
   left: -100%;
@@ -216,7 +216,7 @@ button.ghost {
   margin-top: 0.25rem;
 }
 .error-text {
-  color: red;
+  color: #ffa407;
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }

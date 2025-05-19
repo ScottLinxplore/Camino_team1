@@ -1,19 +1,17 @@
 .buttonMore:hover {
-    background-color: rgb(189, 245, 161);
-    border: rgb(189, 245, 161);
-    color: rgb(147, 180, 151);
+  background-color: #076a6d;
+  color: rgb(255, 255, 255);
 }
 
 .buttonMore {
-    width: 150px;
-    height: 60px;
-    margin-Left: 250px;
-    margin-bottom: 60px;
-    font-weight: bold;
-    background-color: rgb(104,175,69);
-    color: rgb(255, 255, 255);
-    border: rgb(104,175,69) solid 2px;
-    border-radius: 8px;
-    cursor:pointer;
-    font-size: "16px"
+  width: 150px;
+  height: 60px;
+  margin-left: 250px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  background-color: #008a8e;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: "16px";
 }

@@ -1,3 +1,4 @@
+/* 改改改改改改改改改改 */
 .selectBox {
   font-size: 18px;
   padding: 5px;
@@ -13,7 +14,7 @@
 
 .mapImage {
   width: 1400px;
-  transform: translate(-250px, -50px) scale(1.1);
+  transform: translate(-280px, -80px) scale(1.1);
   position: absolute;
 }
 
@@ -21,7 +22,7 @@
   width: 290%;
   height: 290%;
   position: absolute;
-  top: -90px;
+  top: -70px;
   left: -700px;
   z-index: 1;
   pointer-events: none;
