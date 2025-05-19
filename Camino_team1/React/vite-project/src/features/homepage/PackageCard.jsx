@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./PackageCard.module.css";
+import LikeButton from "../LikeButton";
 
 export default function PackageCard({ route }) {
   const [heart, setHeart] = useState(false);
@@ -24,7 +25,9 @@ export default function PackageCard({ route }) {
             onClick={() => {
               setHeart(!heart);
             }}
-          ></div>
+          >
+            <LikeButton data={route} />
+            </div>
 
           <img src={route.img} />
 

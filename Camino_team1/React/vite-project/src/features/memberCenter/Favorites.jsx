@@ -7,7 +7,8 @@ const Scenery = () => {
   useEffect(() => {
     if (!userId) return;
 
-    fetch(`http://localhost:3001/favorites/details/${userId}`)
+    fetch(`http://localhost:3001/favorites/sight/${userId}`)
+    // fetch(`http://localhost:3001/favorites/details/${userId}`)
       .then((res) => res.json())
       .then(setFavoriteSpots)
       .catch((err) => console.error("讀取景點收藏失敗", err));

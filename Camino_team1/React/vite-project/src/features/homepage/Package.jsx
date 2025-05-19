@@ -7,7 +7,7 @@ export default function Package({ routes }) {
   const [visiblePackages, setVisiblePackages] = useState([]);
   const [fadeOut, setFadeOut] = useState(false);
 
-  // 每3秒換一組
+  // 每5秒換一組
   useEffect(() => {
     if (!Array.isArray(routes) || routes.length === 0) return;
 
@@ -18,7 +18,7 @@ export default function Package({ routes }) {
         setVisiblePackages(getRandom3(routes));
         setFadeOut(false);
       }, 800);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [routes]);

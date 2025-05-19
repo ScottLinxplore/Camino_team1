@@ -56,7 +56,7 @@ app.get("/route", async (req, res) => {
     res.status(200).json(result.rows);
   } catch (err) {
     console.error("❌ 錯誤：", err);
-    res.status(500).send("伺服器錯誤");
+    res.status(500).send("伺服器錯誤2");
   }
 });
 

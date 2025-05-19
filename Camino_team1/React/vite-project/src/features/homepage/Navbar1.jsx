@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import style from "./Navbar1.module.css";
 import logoImgWhite from "./images/logoAndWord2.png";
@@ -27,24 +27,45 @@ export default function Navbar({ userId, isLoggedIn, setIsLoggedIn }) {
     navigate("/Home");
   };
 
-  const fontColor = scrolled ? "black" : "White";
-  const logoImg = scrolled ? logoImgColor : logoImgWhite;
+  // logo導到首頁
+  const toHome = () => {
+    navigate("/");
+  };
+
+  // 判斷位置變色
+  const location = useLocation();
+  const isHome = location.pathname === "/Home" || location.pathname === "/";
+  
+  let fontColor;
+  if (isHome) {
+    fontColor = scrolled ? "black" : "white";
+  } else {
+    fontColor = "black";
+  }
+
+  let logoImg;
+  if (isHome) {
+    logoImg = scrolled ? logoImgColor : logoImgWhite;
+  } else {
+    logoImg = logoImgColor;
+  }
+
 
   return (
     <>
       <nav className={style.left} style={{ color: fontColor }}>
-        <Link to={"/Home"}>
-          <img src={logoImg} alt="logo" />
-        </Link>
+        {/* <Link to={"/Home"}> */}
+          <img src={logoImg} alt="logo" onClick={toHome} />
+        {/* </Link> */}
       </nav>
 
       <nav className={style.right}>
         {isLoggedIn ? (
-          // ✅ 已登入顯示使用者圖示與登出
+          // 已登入顯示使用者圖示與登出
           <div className={style.userIconWrapper}>
             <span className={style.userIcon} style={{ color: fontColor }}>
               <Link to={"/member"}>
-                <FaUser />
+                <FaUser style={{ color: fontColor }}/>
               </Link>
             </span>
             <span
@@ -56,7 +77,7 @@ export default function Navbar({ userId, isLoggedIn, setIsLoggedIn }) {
             </span>
           </div>
         ) : (
-          // ✅ 未登入只顯示登入按鈕
+          // 未登入只顯示登入按鈕
           <span
             className={style.link}
             onMouseEnter={() => setHoverLogin(true)}
