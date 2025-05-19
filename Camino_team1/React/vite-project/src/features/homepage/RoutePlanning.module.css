@@ -25,13 +25,12 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-  align-items: flex-start;
-  padding: 2vh 5vw;
+  align-items: center;
+  padding: 2vh 5vw 2vh 0;
 }
 
-.imgArea {
+.showMapArea {
   flex: 1 1 50%;
   min-width: 280px;
 }

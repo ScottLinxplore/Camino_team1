@@ -198,7 +198,11 @@ app.get("/sight", async (req, res) => {
   }
 });
 
-app.get("/favorites/details/:userId", async (req, res) => {
+
+/// 改改改改改改
+// 收藏景點
+app.get("/favorites/sight/:userId", async (req, res) => {
+// app.get("/favorites/details/:userId", async (req, res) => {
   const { userId } = req.params;
 
   try {
@@ -214,6 +218,45 @@ app.get("/favorites/details/:userId", async (req, res) => {
   } catch (err) {
     console.error("❌ 收藏細節查詢失敗", err);
     res.status(500).json({ message: "伺服器錯誤", error: err });
+  }
+});
+
+// 收藏路線
+app.get("/favorites/route/:userId", async (req, res) => {
+// app.get("/favorites/details/:userId", async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const result = await pool.query(
+      `SELECT r.route_id, r.name, r.intro, r.img
+       FROM favorites f
+       JOIN routes r ON f.route_id::int = r.route_id
+       WHERE f.user_id = $1`,
+      [userId]
+    );
+
+    res.status(200).json(result.rows);
+  } catch (err) {
+    console.error("❌ 收藏細節查詢失敗2", err);
+    res.status(500).json({ message: "伺服器錯誤2", error: err });
+  }
+});
+
+// 顯示按讚 -- 這裡要改!!! ⚠️ 會員中心用
+// etch(`http://localhost:3001/api/like/list/${userId}`)
+app.get("/api/like/list/:userId", async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const result = await pool.query(`
+      SELECT user_id, routes.route_id, routes.name
+      FROM likeroutes 
+      JOIN routes ON likeroutes.route_id = routes.route_id
+      where user_id = $1;`, [userId]);
+    res.json(result.rows);
+  } catch (err) {
+    console.error("收藏路線查詢失敗", err);
+    res.status(500).json({ error: "收藏清單查詢失敗" });
   }
 });
 
@@ -249,6 +292,170 @@ app.get("/api/img", async (req, res) => {
   } catch (err) {
     console.error("資料庫錯誤-套裝行程照片", err);
     res.status(500).json({ error: "資料庫讀取失敗-套裝行程照片" });
+  }
+});
+
+// // 收藏路線
+// // 查詢是否按讚
+// // 測試有資料 http://localhost:3001/api/like/check/3?routeId=2
+// app.get("/api/like/check/:userId", async (req, res) => {
+//   const { userId } = req.params;
+//   const { routeId } = req.query;
+
+//   if (!userId || !routeId) {
+//     return res.status(400).json({ error: "缺少 userId 或 routeId" });
+//   }
+//   try {
+//     const result = await pool.query(
+//       `SELECT * FROM likeroutes WHERE user_id = $1 AND route_id = $2;`,
+//       [userId, routeId]
+//     );
+
+//     res.json({ liked: result.rows.length > 0 });
+//   } catch (err) {
+//     console.error("查詢按讚失敗", err);
+//     res.status(500).json({ error: "查詢按讚失敗7" });
+//   }
+// });
+
+// // 新增或取消按讚
+// // 測試url http://localhost:3001/api/like/toggle
+// app.post("/api/like/toggle", async (req, res) => {
+//   const { userId, routeId } = req.body;
+
+//   if (!userId || !routeId) {
+//     return res.status(400).json({ error: "缺少 userId 或 routeId" });
+//   }
+
+//   try {
+//     const check = await pool.query(
+//       "SELECT * FROM likeroutes WHERE user_id = $1 AND route_id = $2",
+//       [userId, routeId]
+//     );
+
+//     if (check.rows.length > 0) {
+//       await pool.query(
+//         "DELETE FROM likeroutes WHERE user_id = $1 AND route_id = $2",
+//         [userId, routeId]
+//       );
+//       res.json({ liked: false });
+//     } else {
+//       await pool.query(
+//         "INSERT INTO likeroutes (user_id, route_id) VALUES ($1, $2)",
+//         [userId, routeId]
+//       );
+//       res.json({ liked: true });
+//     }
+//   } catch (err) {
+//     console.error("按讚處理錯誤", err);
+//     res.status(500).json({ error: "按讚處理失敗" });
+//   }
+
+// });
+
+// // 顯示按讚
+// // etch(`http://localhost:3001/api/like/list/${userId}`)
+// app.get("/api/like/list/:userId", async (req, res) => {
+//   const { userId } = req.params;
+
+//   try {
+// //     const result = await pool.query(`SELECT * FROM likeroutes where user_id = $1;`, [userId]);
+// //     res.json(result.rows);
+// //   } catch (err) {
+// //     console.error("收藏路線查詢失敗", err);
+// //     res.status(500).json({ error: "收藏清單查詢失敗" });
+// //   }
+// // });
+//     const result = await pool.query(`
+//       SELECT user_id, routes.route_id, routes.name
+//       FROM likeroutes 
+//       JOIN routes ON likeroutes.route_id = routes.route_id
+//       where user_id = $1;`, [userId]);
+//     res.json(result.rows);
+//   } catch (err) {
+//     console.error("收藏路線查詢失敗", err);
+//     res.status(500).json({ error: "收藏清單查詢失敗" });
+//   }
+// });
+
+
+
+// 收藏景點
+// 查詢是否按讚
+// 測試有資料 http://localhost:3001/api/like/check/3?routeId=2
+// 測試有資料 http://localhost:3001/api/like/check/60?attractionId=3
+app.get("/api/like/check/:userId", async (req, res) => {
+  const { userId } = req.params;
+  const { routeId, attractionId } = req.query;
+
+const parsedRouteId = routeId === "null" ? null : routeId;
+const parsedAttractionId = attractionId === "null" ? null : attractionId;
+
+  if (!userId || (!parsedRouteId && !parsedAttractionId)) {
+    return res.status(400).json({ error: "缺少 userId 或 routeId 或 attractionId" });
+  }
+
+  try {
+    const result = await pool.query(
+      `SELECT * FROM favorites WHERE user_id = $1 AND (route_id = $2 OR attraction_id = $3)`,
+      [userId, parsedRouteId, parsedAttractionId]
+    );
+    res.json({ liked: result.rows.length > 0 });
+  } catch (err) {
+    console.error("查詢按讚失敗4", err);
+    res.status(500).json({ error: "查詢按讚失敗4" });
+  }
+});
+
+// // 新增或取消按讚
+// // 測試url http://localhost:3001/api/like/toggle
+app.post("/api/like/toggle", async (req, res) => {
+  const { userId, routeId, attractionId } = req.body;
+
+  if (!userId || (!routeId && !attractionId)) {
+    return res.status(400).json({ error: "缺少 userId 或 routeId 或 attractionId-1" });
+  }
+
+  try {
+    const check = await pool.query(
+      "SELECT * FROM favorites WHERE user_id = $1 AND (route_id = $2 OR attraction_id = $3)",
+      [userId, routeId, attractionId]
+    );
+
+    if (check.rows.length > 0) {
+      await pool.query(
+        "DELETE FROM favorites WHERE user_id = $1 AND (route_id = $2 OR attraction_id = $3)",
+        [userId, routeId, attractionId]
+      );
+      res.json({ liked: false });
+    } else {
+      await pool.query(
+        "INSERT INTO favorites (user_id, route_id, attraction_id) VALUES ($1, $2, $3)",
+        [userId, routeId, attractionId]
+      );
+      res.json({ liked: true });
+    }
+  } catch (err) {
+    console.error("按讚處理錯誤2", err);
+    res.status(500).json({ error: "按讚處理失敗2" });
+  }
+});
+
+// 顯示按讚 -- 這裡要改!!! ⚠️ 會員中心用
+// etch(`http://localhost:3001/api/like/list/${userId}`)
+app.get("/api/like/list/:userId", async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const result = await pool.query(`
+      SELECT user_id, routes.route_id, routes.name
+      FROM likeroutes 
+      JOIN routes ON likeroutes.route_id = routes.route_id
+      where user_id = $1;`, [userId]);
+    res.json(result.rows);
+  } catch (err) {
+    console.error("收藏路線查詢失敗", err);
+    res.status(500).json({ error: "收藏清單查詢失敗" });
   }
 });
 

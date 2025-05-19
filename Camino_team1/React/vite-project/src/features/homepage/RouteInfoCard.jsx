@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import style from "./RouteInfoCard.module.css";
+import LikeButton from "../LikeButton";
 
-export default function RouteInfoCard({ route }) {
+export default function RouteInfoCard({ sight }) {
   const [heart, setHeart] = useState(false);
 
-  //導去相關頁面
-  const goToRouteInfo = (routeId) => {
-    window.open(`/routeintro`, "_blank");
+  if (!sight) return null;
+
+  //導去景點頁面
+  const goToRouteInfo = (sightId) => {
+    window.open(`/sight/${sightId}`, "_blank");
   };
 
   return (
     <>
-      <div className={style.card} onClick={() => goToRouteInfo(route.route_id)}>
+      <div className={style.card} onClick={() => goToRouteInfo(sight.sight_id)}>
         <div className={style.upper}>
           <div
             className={style.heart}
@@ -20,9 +23,10 @@ export default function RouteInfoCard({ route }) {
             }}
           >
             {/* 愛心放這裡, 有css不要可以刪除 */}
+            <LikeButton data={sight} />
           </div>
 
-          <img src={route.img} />
+          <img src={sight.img_url} />
 
           <div className={style.corner}>
             <svg viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -30,7 +34,7 @@ export default function RouteInfoCard({ route }) {
             </svg>
           </div>
 
-          <div className={style.title}>{route.name}</div>
+          <div className={style.title}>{sight.cname}</div>
         </div>
       </div>
     </>

@@ -27,6 +27,8 @@ import Description_9 from "../src/features/sight_description/sight_des9.jsx";
 
 import Homepage from "./features/pages/memberCenter/Homepage.jsx"; //首頁
 import Navbar1 from "./features/homepage/Navbar1.jsx";
+import Banner from "./features/homepage/Banner.jsx";
+import Navbar2 from "./features/homepage/Navbar2.jsx";
 import Footer from "./features/homepage/Footer.jsx";
 
 // ---------------------------------v1.0-------------------------------
@@ -87,13 +89,17 @@ function App() {
   return (
     <>
       {/* 導覽列 */}
-      <nav>
+      {/* 5/18改改改改改_99加上Banner&Navbar2 讓每頁都有完整導覽列 */}
+      {/* <nav> */}
         <Navbar1
           userId={localStorage.getItem("userId")}
           isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
         />
-      </nav>
+        <Banner />
+        <Navbar2 />
+      {/* </nav> */}
+
       {/* 路由設定 */}
       <ScrollToTop />
       <Routes>
