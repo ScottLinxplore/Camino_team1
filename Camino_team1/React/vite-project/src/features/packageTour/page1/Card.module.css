@@ -16,7 +16,8 @@
     overflow: hidden;
     position: relative;
     display: inline-block;
-    user-select: none;/*取消照片被選取*/
+    user-select: none;
+    /*取消照片被選取*/
 }
 
 .imageWrapper img {
@@ -25,21 +26,23 @@
     object-fit: cover;
     display: block;
 }
-.faicon{
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  font-size: 30px;
-  color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
-  cursor: pointer; /*游標變小手*/
-  transition: color 0.5s ease;
+
+.faicon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    cursor: pointer;
+    /*游標變小手*/
+    transition: color 0.5s ease;
 }
 
 .faicon:hover {
-    color: greenyellow; 
+    color: greenyellow;
     transform: scale(1.1);
-  }
+}
 
 .card:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -50,4 +53,16 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 8px;
+}
+
+.heart {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 24px;
+    color: #bbb;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    color: #DAFF60;
 }

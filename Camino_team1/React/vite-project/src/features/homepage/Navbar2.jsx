@@ -10,7 +10,7 @@ export default function Navbar2() {
 
   const isHome = location.pathname === "/" || location.pathname === "/Home";
 
-
+  // 相關資訊
   const toInfo = () => {
     navigate("/cards");
   };
@@ -19,14 +19,26 @@ export default function Navbar2() {
     navigate("/weather");
   };
 
-  const toRoute = () => {
-    navigate("/routeintro");
-  };
   // HomeRoute
   const toHomeRoute = () => {
+    alert("ok!");
     navigate("/HomeRoute");
   };
 
+  // 法國之路路線資訊
+  const toRouteInfo = () => {
+    navigate("/routeintro");
+  };
+
+  // 套裝行程
+  const toPackage = () => {
+    navigate("/page1");
+  };
+
+  //路線規劃/route
+   const toRoute = () => {
+    navigate("/route");
+  };
 
   // Navbar滾動變色效果
   useEffect(() => {
@@ -50,35 +62,45 @@ export default function Navbar2() {
   }
 
   return (
-    <div className={style.navContainer}
-      style={{ marginTop: isHome ? "-4%" : "0" }}>
+    <div
+      className={style.navContainer}
+      style={{ marginTop: isHome ? "-4%" : "0" }}
+    >
       <nav
         className={style.navLinks}
         style={{ backgroundColor: backgroundColor }}
       >
-        <div className={style.navItem} style={{ color: fontColor }}>
+        <div
+          className={style.navItem}
+          style={{ color: fontColor }}
+          onClick={toPackage}
+        >
           套裝行程
         </div>
 
         <div className={style.navItemWithDropdown}>
-          <div className={style.navItem} 
-          style={{ color: fontColor }}
-          onClick={toHomeRoute}>
+          <div
+            className={style.navItem}
+            style={{ color: fontColor }}
+            onClick={toHomeRoute}
+          >
             路線資訊
           </div>
           <div className={style.dropdownMenu}>
             <ul className={style.dropdownCol}>
-              <li onClick={toRoute}>法國之路</li>
-              <li onClick={toRoute}>銀之路</li>
-              <li onClick={toRoute}>北方之路</li>
-              <li onClick={toRoute}>原始之路</li>
-              <li onClick={toRoute}>英國之路</li>
-              <li onClick={toRoute}>葡萄牙之路</li>
+              <li onClick={toRouteInfo}>法國之路</li>
+              <li onClick={toRouteInfo}>銀之路</li>
+              <li onClick={toRouteInfo}>北方之路</li>
+              <li onClick={toRouteInfo}>原始之路</li>
+              <li onClick={toRouteInfo}>英國之路</li>
+              <li onClick={toRouteInfo}>葡萄牙之路</li>
             </ul>
           </div>
         </div>
 
-        <div className={style.navItem} style={{ color: fontColor }}>
+        <div className={style.navItem} 
+        style={{ color: fontColor }}
+        onClick={toRoute}>
           路線規劃
         </div>
         <div className={style.navItemWithDropdown}>
