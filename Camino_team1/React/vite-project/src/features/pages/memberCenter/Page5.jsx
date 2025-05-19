@@ -1,26 +1,20 @@
-import { useState } from "react";
-import "./Page5.module.css";
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import CheckoutSteps from "../../packageTour/page5/CheckoutSteps";
 import PassengerForm from "../../packageTour/page5/PassengerForm";
-// import FlightInfo from "../../packageTour/page5/FlightInfo";
-// import AccommodationList from ".../../packageTour/page5/AccommodationList";
 import AmountSummary from "../../packageTour/page5/AmountSummary";
-import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./Page5.module.css";
 
 function P_5_package() {
   const navigate = useNavigate();
   const location = useLocation();
+
+  // 從前一頁傳來的資料
   const { routeId, totalAmount } = location.state || {};
-  const goToPage1 = () => {
-    navigate("/page1");
-  };
-  const goToPage4 = () => {
-    navigate("/page4");
-  };
+
   const [count, setCount] = useState(0);
   const [currentStep, setCurrentStep] = useState(3);
+
   const nextStep = () => {
     if (currentStep < 3) {
       setCurrentStep(currentStep + 1);
@@ -28,39 +22,48 @@ function P_5_package() {
       setCurrentStep(0);
     }
   };
-  // if()
+
+  //綠界付款 API 呼叫
+  const handlePayment = async () => {
+    try {
+      const response = await fetch("http://localhost:3002/create-payment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ totalAmount }),
+      });
+
+      const html = await response.text();
+      const newWindow = window.open(); // 在新視窗開啟綠界頁面
+      newWindow.document.write(html);
+    } catch (error) {
+      console.error("❌ 發送付款請求失敗：", error);
+      alert("付款請求失敗，請稍後再試");
+    }
+  };
+
   return (
     <div style={{ width: "90%", margin: "0 auto" }}>
       <h2
         style={{
           fontSize: "60px",
           fontWeight: "bold",
-          // margin: 40,
-          // border: "2px solid palevioletred",
           width: "100%",
         }}
       >
         付款頁面
       </h2>
+
       <CheckoutSteps currentStep={currentStep} />
-      {/* <button onClick={nextStep}>下一步</button> */}
 
       <div className={styles["booking-container"]}>
         {/* 左側：填寫資料區 */}
         <div className={styles["booking-left"]}>
           <PassengerForm />
-          <AmountSummary totalAmount={totalAmount} />
+          <AmountSummary
+            totalAmount={totalAmount}
+            onNext={handlePayment} // ✅ 點擊觸發綠界付款流程
+          />
         </div>
-
-        {/* 右側：摘要資訊區 */}
-        {/* <div className={styles["booking-right"]}>
-          <FlightInfo />
-          <AccommodationList />
-        </div> */}
-      </div>
-      <div>
-        {/* <button onClick={goToPage4}>返回</button>
-        <button onClick={goToPage1}>下一頁</button> */}
       </div>
     </div>
   );

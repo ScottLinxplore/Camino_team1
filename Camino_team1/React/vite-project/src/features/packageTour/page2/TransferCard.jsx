@@ -21,9 +21,12 @@ export default function TransferCard({
           <p>{date}</p>
           <p>車型：{model}</p>
         </div>
-        <div className={style["transfer-price"]}>
+        {/*  ------------------------金額改調----------------------------------------  */}
+        {/*  ------------------------金額改調----------------------------------------  */}
+        {/*  ------------------------金額改調----------------------------------------  */}
+        {/* <div className={style["transfer-price"]}>
           NT$ {price.toLocaleString()}
-        </div>
+        </div> */}
       </div>
     </div>
   );

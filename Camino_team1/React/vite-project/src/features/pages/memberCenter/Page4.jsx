@@ -11,6 +11,21 @@ import AmountSummary from "../../packageTour/page4/AmountSummary";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function P_4_package() {
+  const [formData, setFormData] = useState({
+    lastName: "",
+    firstName: "",
+    gender: "",
+    birthDate: "",
+    passport: "",
+    passportExpiry: "",
+    country: "",
+    email: "",
+    number: "",
+    phone: "",
+    emergencyName: "",
+    emergencyRelation: "",
+    emergencyPhone: "",
+  });
   const navigate = useNavigate();
   const location = useLocation();
   const { routeId, startDate, endDate, departure, returning, rooms, carCount } =
@@ -53,9 +68,9 @@ function P_4_package() {
       <div className={styles["booking-container"]}>
         {/* 左側：填寫資料區 */}
         <div className={styles["booking-left"]}>
-          <PassengerForm />
-          <ContactForm />
-          <EmergencyContact />
+          <PassengerForm formData={formData} setFormData={setFormData} />
+          <ContactForm formData={formData} setFormData={setFormData} />
+          <EmergencyContact formData={formData} setFormData={setFormData} />
         </div>
 
         {/* 右側：摘要資訊區 */}

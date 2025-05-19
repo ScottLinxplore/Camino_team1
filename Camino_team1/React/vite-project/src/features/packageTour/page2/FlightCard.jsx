@@ -8,7 +8,10 @@ export default function FlightCard({ title, route, price, duration }) {
       <div className={style["flight-box"]}>
         <div className={style["flight-info"]}>
           <p>{route}</p>
-          <p>NT$ {price.toLocaleString()}</p>
+          {/*  ------------------------金額改調----------------------------------------  */}
+          {/*  ------------------------金額改調----------------------------------------  */}
+          {/*  ------------------------金額改調----------------------------------------  */}
+          {/* <p>NT$ {price.toLocaleString()}</p> */}
           <p>
             總耗時：<span className={style.duration}>{duration}</span>
           </p>

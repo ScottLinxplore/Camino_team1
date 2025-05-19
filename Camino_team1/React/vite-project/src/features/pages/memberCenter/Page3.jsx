@@ -11,8 +11,16 @@ import "./Page3.module.css";
 function P_3_Package() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { routeId, startDate, endDate, departure, returning, rooms, carCount } =
-    location.state || {};
+  const {
+    routeId,
+    startDate,
+    endDate,
+    departure,
+    returning,
+    rooms,
+    carCount,
+    showPrice = true,
+  } = location.state || {};
 
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -41,7 +49,8 @@ function P_3_Package() {
         groupedRoomsMap[roomName] = {
           name: roomName,
           dates: [],
-          price: calcRoomPrice(roomName),
+          price: showPrice ? calcRoomPrice(roomName) : null,
+          // showPrice ? group.price * group.dates.length : null
         };
       }
       groupedRoomsMap[roomName].dates.push(r.date);
@@ -56,7 +65,7 @@ function P_3_Package() {
   const groupedRooms = Object.values(groupedRoomsMap);
 
   const roomTotal = rooms.reduce((acc, r) => acc + calcRoomPrice(r.room), 0);
-  const shuttleTotal = (carCount || 0) * 2500;
+  const shuttleTotal = showPrice ? (carCount || 0) * 2500 : null;
   const totalAmount =
     (departure?.price || 0) +
     (returning?.price || 0) +
@@ -70,6 +79,7 @@ function P_3_Package() {
       </h2>
 
       <CheckoutSteps currentStep={currentStep} />
+      {/* 改改改 */}
       {/* <button onClick={nextStep}>下一步</button> */}
 
       <TripDetails routeId={routeId} startDate={startDate} endDate={endDate} />
@@ -80,6 +90,8 @@ function P_3_Package() {
         dateBack={new Date(endDate)}
         shuttleCount={carCount}
         shuttleTotal={shuttleTotal}
+        showPrice={showPrice}
+        // showPrice ? calcRoomPrice(roomName) : null
       />
 
       <div>
@@ -124,13 +136,16 @@ function P_3_Package() {
               name={group.name}
               date={rangeText}
               day={group.dates.length}
-              price={group.price * group.dates.length}
+              price={showPrice ? group.price * group.dates.length : null}
+              showPrice={showPrice}
+              // showPrice ? calcRoomPrice(roomName) : null
             />
           );
         })}
       </div>
 
       <AmountSummary
+        showPrice={showPrice}
         totalAmount={totalAmount}
         onNext={() =>
           navigate("/page4", {

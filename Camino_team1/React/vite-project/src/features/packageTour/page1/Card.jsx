@@ -16,11 +16,11 @@ export default function Card({ route, userId }) {
   };
 
 
-  const toggleLike = async () => {
-    const newLiked = !liked;
-    setLiked(newLiked); // 更新畫面
+  // const toggleLike = async () => {
+  //   const newLiked = !liked;
+  //   setLiked(newLiked); // 更新畫面
 
-  };
+  // };
   return (
     <div className={styles.card} onClick={goToPage2}>
       <div className={styles.imageWrapper}>
