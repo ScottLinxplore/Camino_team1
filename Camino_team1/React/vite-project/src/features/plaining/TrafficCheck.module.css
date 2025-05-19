@@ -1,3 +1,4 @@
+/* 改改改改改改改改改改改改改改改改 */
 .sectionWrapper {
   margin-bottom: 1rem;
   display: flex;
@@ -15,8 +16,8 @@
   padding: 10px;
   margin-top: 1rem;
   margin-right: 10px;
-  width: 100%;
-  max-width: 720px;
+  width: 720px;
+  /* max-width: 720px; */
   box-sizing: border-box;
 }
 

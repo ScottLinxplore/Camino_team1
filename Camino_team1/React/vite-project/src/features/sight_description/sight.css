@@ -1,13 +1,15 @@
-.backbtn{
-    display: flex;
-    width: 150px;
-    height: 30px;
-    justify-content: center;
-    text-align: center;
-    background-color: rgb(104, 175, 69);
-    color: rgb(255, 255, 255);
-    border: rgb(104,175,69) solid 2px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px
+.backbtn {
+  display: flex;
+  width: 150px;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  background-color: #008a8e;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.backbtn:hover {
+  background-color: #076a6d;
 }

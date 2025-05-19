@@ -41,7 +41,7 @@
 }
 
 .next-button {
-  background-color: #4caf50;
+  background-color: #015658;
   color: white;
   padding: 6px 16px;
   font-size: 14px;
@@ -55,5 +55,5 @@
 }
 
 .next-button:hover {
-  background-color: #45a049;
+  background-color: #015658;
 }

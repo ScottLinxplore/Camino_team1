@@ -1,3 +1,4 @@
+// 改改改改改改改改改改改改改改
 import React from "react";
 import styles from "./TrafficCheck.module.css";
 
@@ -69,7 +70,7 @@ function TrafficCheckStructure({ data, type }) {
       <div className={styles.ticketBox}>
         <strong>{title}：</strong>{" "}
         {isValid
-          ? `${from} → ${to}　　　　總耗時：約 ${time} 小時　　　　NT$： ${price}`
+          ? `${from} → ${to}　　　總耗時：約 ${time} 小時　　　NT$： ${price}`
           : "尚未訂購"}
       </div>
     );
@@ -78,7 +79,7 @@ function TrafficCheckStructure({ data, type }) {
   return (
     <div>
       {type === "flight" ? (
-        <div>
+        <div style={{ display: "flex", gap: "10px" }}>
           {renderSection("去程", data.goFlights)}
           {renderSection("回程", data.backFlights)}
         </div>

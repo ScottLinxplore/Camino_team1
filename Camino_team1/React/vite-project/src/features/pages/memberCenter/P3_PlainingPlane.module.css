@@ -1,11 +1,12 @@
+/* 改改改改改改改改改改改改 */
 .planing-plane {
   padding: 2rem;
   width: 100%;
 }
 
 .route_name h3 {
-  font-size: 2rem;
-  color: #6c90a9;
+  font-size: 40px;
+  color: #004547;
   text-align: center;
   padding-top: 5rem;
 }
@@ -26,7 +27,7 @@
   display: inline-block;
   width: 100px;
   text-align: center;
-  border: 5px solid #b8d6aa;
+  border: 5px solid #50b9bd;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -35,7 +36,7 @@
 }
 
 .calendar-header {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
   padding: 6px;
   font-size: 16px;
   font-weight: bold;
@@ -90,7 +91,7 @@
 }
 
 .timeline-line.completed {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
 }
 
 .timeline-line.long2 {
@@ -99,7 +100,7 @@
 }
 
 .timeline-line.blue-line {
-  background-color: #7fabf3;
+  background-color: #50b9bd;
 }
 
 .checkbox-container {
@@ -107,6 +108,7 @@
   justify-content: space-around;
   width: 100%;
   margin-top: 1rem;
+  gap: 1rem;
 }
 
 input[type="checkbox"] {
@@ -172,22 +174,25 @@ input[type="checkbox"] {
 }
 
 .departurecheck {
+  margin-left: 0.5rem;
 }
 
 .returncheck {
+  margin-left: 0.5rem;
 }
-
+/* 
 .departure-flight-list {
 }
 
 .Return-flight-list {
 }
-
+/*  */
 .fight-text {
+  margin: 2rem;
 }
 
-.flight-time {
+/* .flight-time {
 }
 
 .ticket-money {
-}
+} */

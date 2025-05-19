@@ -1,5 +1,5 @@
 .button {
-  background-color: #66bb44;
+  background-color: #008a8e;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -8,11 +8,12 @@
   font-weight: bold;
   cursor: pointer;
   margin: 0 10px;
+  transition: all 0.3s ease-in;
 }
 .button:hover {
-  background-color: #5aa53d;
+  background-color: #076a6d;
 }
 .button:active {
-  background-color: #4d9237;
+  background-color: #076a6d;
   transform: scale(0.96);
 }

@@ -1,3 +1,5 @@
+/* 改改改改改改改改改改改 */
+
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +10,8 @@
 .planingdate {
   width: 100%;
   height: auto;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 .route_name {
   margin: 0 auto;
@@ -15,8 +19,8 @@
 }
 
 .route_name h3 {
-  font-size: 2rem;
-  color: #6c90a9;
+  font-size: 40px;
+  color: #004547;
   padding-top: 5rem;
 }
 .calendar-container {
@@ -27,7 +31,7 @@
   display: inline-block;
   width: 100px;
   text-align: center;
-  border: 5px solid #b8d6aa;
+  border: 5px solid #50b9bd;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -36,7 +40,7 @@
 }
 
 .calendar-header {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
   padding: 6px;
   font-size: 16px;
   font-weight: bold;
@@ -158,7 +162,7 @@
 }
 
 .timeline-line.completed {
-  background-color: #b8d6aa;
+  background-color: #50b9bd;
 }
 
 .timeline-step.completed .dot {

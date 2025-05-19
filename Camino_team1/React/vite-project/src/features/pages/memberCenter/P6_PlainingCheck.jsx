@@ -233,7 +233,7 @@
 // }
 
 // export default CheckPage;
-
+// 改改改改改改改改改改
 // CheckPage.jsx
 import React from "react";
 import RouteCheck from "../../plaining/routeCheck";
@@ -430,7 +430,7 @@ function CheckPage() {
           width: "100%",
         }}
       >
-        <div style={{ display: "block" }}>
+        <div style={{ display: "block", marginLeft: "-65px" }}>
           <TrafficCheck />
         </div>
         <div style={{ display: "block", marginTop: "-10px" }}>

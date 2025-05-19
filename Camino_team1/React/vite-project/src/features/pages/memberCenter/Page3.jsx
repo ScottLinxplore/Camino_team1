@@ -70,7 +70,7 @@ function P_3_Package() {
       </h2>
 
       <CheckoutSteps currentStep={currentStep} />
-      <button onClick={nextStep}>下一步</button>
+      {/* <button onClick={nextStep}>下一步</button> */}
 
       <TripDetails routeId={routeId} startDate={startDate} endDate={endDate} />
       <TransportInfo
