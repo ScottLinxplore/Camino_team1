@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ChoosenMapInfo({ routes, selectId }) {
   const selectedRoute = routes?.find((r) => r.route_id === Number(selectId));
+  const navigate = useNavigate();
   if (!selectedRoute) return null;
 
   return (
@@ -18,11 +20,13 @@ export default function ChoosenMapInfo({ routes, selectId }) {
         justifyContent: "flex-start",
       }}
     >
-      <table style={{
-        width: "100%",
-        borderCollapse: "collapse",
-        marginBottom: "16px",
-      }}>
+      <table
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+          marginBottom: "16px",
+        }}
+      >
         <thead>
           <tr>
             <th
@@ -40,20 +44,26 @@ export default function ChoosenMapInfo({ routes, selectId }) {
           </tr>
           <tr style={{ backgroundColor: "#e0e0e0" }}>
             <th style={{ padding: "12px 16px", textAlign: "left" }}>總長</th>
-            <th style={{ padding: "12px 16px", textAlign: "left" }}>建議天數</th>
+            <th style={{ padding: "12px 16px", textAlign: "left" }}>
+              建議天數
+            </th>
             <th style={{ padding: "12px 16px", textAlign: "left" }}>難度</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style={{ padding: "12px 16px" }}>{selectedRoute.length} 公里</td>
+            <td style={{ padding: "12px 16px" }}>
+              {selectedRoute.length} 公里
+            </td>
             <td style={{ padding: "12px 16px" }}>{selectedRoute.days} 天</td>
             <td style={{ padding: "12px 16px" }}>
-              {{
-                1: "簡單",
-                2: "中等",
-                3: "困難",
-              }[selectedRoute.difficulty]}
+              {
+                {
+                  1: "簡單",
+                  2: "中等",
+                  3: "困難",
+                }[selectedRoute.difficulty]
+              }
             </td>
           </tr>
         </tbody>
@@ -81,7 +91,7 @@ export default function ChoosenMapInfo({ routes, selectId }) {
 
       <div style={{ textAlign: "center", marginTop: "12px" }}>
         <a
-          href={`/RouteIntro${selectId}`}
+          href={`/routeIntro${selectId}`}
           style={{
             display: "inline-block",
             padding: "10px 20px",
@@ -93,6 +103,10 @@ export default function ChoosenMapInfo({ routes, selectId }) {
             fontSize: "16px",
             textDecoration: "none",
             transition: "all 0.3s ease-in",
+          }}
+          onClick={() => {
+            setPathId(path.id);
+            navigate("/PlainingDate", { state: { routeId: path.id } });
           }}
         >
           路線規劃

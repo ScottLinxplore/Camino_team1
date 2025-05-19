@@ -37,7 +37,6 @@ export default function LikeButton({ data }) {
       });
       const data = await res.json();
       setIsLiked(data.liked);
-      console.log("皮卡丘");
     } catch (err) {
       console.error("切換按讚失敗", err);
     }
