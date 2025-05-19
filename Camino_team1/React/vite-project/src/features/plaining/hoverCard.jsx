@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./HoverCard.module.css";
-
+import hover from "./image/hoverEL.png";
 function HoverCard({ id, style }) {
   const [data, setData] = useState(null);
 
@@ -24,11 +24,7 @@ function HoverCard({ id, style }) {
 
   return (
     <div className={styles.container} style={style}>
-      <img
-        src="https://media-hosting.imagekit.io/c4dfdbac67644b1b/hoverEL.png?Expires=1840549000&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WFm00J8RXC9mcdOEk--WCpI7qji6FYXLx2UcqiDCz93rnqe~0-0sA6csaRZhCEt9NA05~FWIdEr5ud9mygtvNCP7YsZYpSqRMbFGBjpRqNKTFI1~KbFPdEfDhnEA0g47A0tNHfCSKBsKNCwnNkqySISf5shdc3X-vZKHPaFV4guZEy8qIZdBW44nQBIiJju7CKFoR0Opj6Y3SQKJxRGfOLfwv1teY~i8gA121UUNCDIgCVk7J92YnQ-rQR4O1sUKRRrJ~76XYgkEBqgbYQbvBmgHmeHv1mYJ3LGr~e7Tlbp9lcjbF6S8hsAjhbL1vyufPHyxv0i-r-jP-YPQ-omJ6Q__"
-        alt="hoverCard"
-        className={styles.image}
-      />
+      <img src={hover} alt="hoverCard" className={styles.image} />
       <div className={styles.textBox}>
         <p className={styles.text}>路線名稱: {route.name}</p>
         <p className={styles.text}>起點: {route.start_city}</p>

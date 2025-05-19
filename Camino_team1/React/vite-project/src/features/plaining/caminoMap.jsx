@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HoverCard from "./hoverCard";
 import { useNavigate } from "react-router-dom";
 import styles from "./caminoMap.module.css";
-
+import caminoMap from "./image/camino_fullMap_land.png";
 const pathsData = [
   {
     id: "1",
@@ -46,15 +46,10 @@ function MapRoute() {
   const [hoveredPath, setHoveredPath] = useState(null);
   const navigate = useNavigate();
   const [, setPathId] = useState(null);
-
   return (
     <div className={styles.mapContainer}>
       {/* 背景地圖 */}
-      <img
-        src="https://media-hosting.imagekit.io/2c8916dd5f1c412e/camino_fullMap_land.png?Expires=1840515061&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U9eE7YkHtwTK2Pnbee9fwMEQGyQiMSZq1-htkRVv5Ngl-LwrBWKkwtigSAY3BzvFVrIGiuOKpraOlaijYPdE4DusgdEt8cG6ugvMg75l3oL650tPb3QeR3NzaSm1j75AYm8tHPNFdSPmUmLmovFPXXLAIiDKUe9s0b-RCiA9U91YwDZWpNWVrnnGCpQd5zyH4eJFxcOP9wyWvsn3i7wHcaChWHy5Une1hxjeYkK5sDhGE-ht~aFvcE~4ObLw6qeGH~jdpfwszIqs9BQRlL9oAoBmMs5mvcaaN7xZmfWnjJ~l-rf4UaqRID5c18mb4zcZTMStGhkw9meuyrTwroPAiw__"
-        alt="mapBackground"
-        className={styles.mapImage}
-      />
+      <img src={caminoMap} alt="mapBackground" className={styles.mapImage} />
 
       {/* 上層互動路線 */}
       <svg
