@@ -5,12 +5,13 @@
   margin-bottom: 2vh;
 }
 
+
 .navLinks {
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
-  z-index: 500;
+  z-index: 1000;
   background-color: white;
   gap: 40px;
   margin-top:0;

@@ -34,7 +34,7 @@ export default function Banner() {
       }
 
       if (Math.abs(totalRotation) >= 180) {
-        document.body.style.overflow = "auto";
+        // document.body.style.overflow = "auto";
         scrollingAllowed = true;
       }
     };

@@ -27,8 +27,8 @@ import Description_9 from "../src/features/sight_description/sight_des9.jsx";
 
 import Homepage from "./features/pages/memberCenter/Homepage.jsx"; //首頁
 import Navbar1 from "./features/homepage/Navbar1.jsx";
-import Banner from "./features/homepage/Banner.jsx";
 import Navbar2 from "./features/homepage/Navbar2.jsx";
+import Banner from "./features/homepage/Banner.jsx";
 import Footer from "./features/homepage/Footer.jsx";
 
 // ---------------------------------v1.0-------------------------------
@@ -85,6 +85,7 @@ function App() {
       })
       .catch((err) => console.error("路線讀取失敗", err));
   }, []);
+  
 
   return (
     <>
@@ -97,7 +98,7 @@ function App() {
           setIsLoggedIn={setIsLoggedIn}
         />
         <Banner />
-        <Navbar2 />
+        {location.pathname === "/" || location.pathname === "/Home" ? <Navbar2 /> : null}
       {/* </nav> */}
 
       {/* 路由設定 */}

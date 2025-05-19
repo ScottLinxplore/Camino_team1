@@ -21,7 +21,6 @@ export default function Navbar2() {
 
   // HomeRoute
   const toHomeRoute = () => {
-    alert("ok!");
     navigate("/HomeRoute");
   };
 

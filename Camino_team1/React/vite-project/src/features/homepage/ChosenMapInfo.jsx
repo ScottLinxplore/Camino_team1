@@ -91,7 +91,7 @@ export default function ChoosenMapInfo({ routes, selectId }) {
 
       <div style={{ textAlign: "center", marginTop: "12px" }}>
         <a
-          href={`/routeIntro${selectId}`}
+          // href={`/routeIntro${selectId}`}
           style={{
             display: "inline-block",
             padding: "10px 20px",
@@ -105,8 +105,7 @@ export default function ChoosenMapInfo({ routes, selectId }) {
             transition: "all 0.3s ease-in",
           }}
           onClick={() => {
-            setPathId(path.id);
-            navigate("/PlainingDate", { state: { routeId: path.id } });
+            navigate("/PlainingDate", { state: { routeId: selectId } });
           }}
         >
           路線規劃
