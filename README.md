@@ -19,7 +19,7 @@
   <tr>
     <td width="50%">
 1. 首頁
-<video src="https://github.com/user-attachments/assets/442bec37-449e-49f3-938c-4f61fd631e0f" controls width="50%" style="max-width: 720px; border-radius: 12px;"></video>
+<video src="https://github.com/user-attachments/assets/55b215da-a4bd-4395-9d82-4c0a6e1fd9f0" controls width="50%" style="max-width: 720px; border-radius: 12px;"></video>
        </td>
     <td width="50%">
 2. 會員中心
