@@ -15,10 +15,12 @@
 - 加入會員後收藏、追蹤並管理行程規劃
 ---
 ## 🎥 專案操作示範影片
+1. **首頁**
+<video src="https://github.com/user-attachments/assets/442bec37-449e-49f3-938c-4f61fd631e0f" controls width="50%" style="max-width: 720px; border-radius: 12px;"></video>
+2. **會員中心**
+<video src="https://github.com/user-attachments/assets/45a7370f-863e-4f80-a9b2-516ced1aca3f" controls width="50%" style="max-width: 720px; border-radius: 12px;"></video>
 
-<video src="https://github.com/user-attachments/assets/e82acc86-ae8c-43d1-b78a-83980176121d" controls width="100%" style="max-width: 720px; border-radius: 12px;"></video>
 
-> 👆 可直接點擊播放影片，觀看 Camino 專案的操作流程示範。
 
 ---
 
