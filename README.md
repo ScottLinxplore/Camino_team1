@@ -34,3 +34,18 @@
 ```bash
 git clone https://github.com/ScottLinxplore/Camino_team1.git
 cd Camino_team1/React/vite-project
+
+安裝依賴
+npm install
+
+啟動本地開發伺服器
+npm run dev
+
+| 組員  | 負責模組         |
+| --- | ------------ |
+| 鄧菀樺 | 首頁設計與開發      |
+| 林敬庭 | 行程路線規劃、互動式地圖 |
+| 陳慈昀 | 行程規劃模組設計     |
+| 張文川 | 相關服務介紹、會員系統  |
+| 董彥廷 | 套裝行程訂購與推薦系統  |
+| 張驄鏻 | 朝聖相關資訊、活動介紹  |
