@@ -28,9 +28,21 @@
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td width="50%">
+3. 路線規劃
+<video src="https://github.com/user-attachments/assets/683866d2-70b5-4e29-bee9-a8c71ee20520" controls width="50%" style="max-width: 720px; border-radius: 12px;"></video>
+       </td>
+    <td width="50%">
+4. 套裝行程
+<video src="https://github.com/user-attachments/assets/853a3bed-cd26-4c3e-bb76-5225dc5c5e6b" controls width="50%" style="max-width: 720px; border-radius: 12px;"></video>
+        </td>
+  </tr>
+</table>
 
-3. **路線規劃**
-<video src="https://github.com/user-attachments/assets/683866d2-70b5-4e29-bee9-a8c71ee20520" controls width="30%" style="max-width: 720px; border-radius: 12px;"></video>
+
+
 
 
 
