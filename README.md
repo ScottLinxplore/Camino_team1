@@ -14,7 +14,12 @@
 - 一鍵訂購官方設計的套裝行程
 - 加入會員後收藏、追蹤並管理行程規劃
 ---
-https://github.com/user-attachments/assets/e82acc86-ae8c-43d1-b78a-83980176121d
+## 🎥 專案操作示範影片
+
+<video src="https://github.com/user-attachments/assets/e82acc86-ae8c-43d1-b78a-83980176121d" controls width="100%" style="max-width: 720px; border-radius: 12px;"></video>
+
+> 👆 可直接點擊播放影片，觀看 Camino 專案的操作流程示範。
+
 ---
 
 ## 🚀 技術架構
